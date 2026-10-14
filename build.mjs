@@ -137,7 +137,7 @@ function build({ quiet = false } = {}) {
   <a href="/" class="header-logo"><img src="/images/logo.png" alt="healing salon Holly ホーム" width="100" height="100"></a>
   <nav aria-label="メインメニュー">
     ${nav
-      .map((n) => `<a href="${n.path}"${pagePath.startsWith(n.path) ? ' aria-current="page"' : ''}>${esc(n.label)}</a>`)
+      .map((n) => `<a class="tab-item${pagePath.startsWith(n.path) ? ' active' : ''}" href="${n.path}"${pagePath.startsWith(n.path) ? ' aria-current="page"' : ''}>${esc(n.label)}</a>`)
       .join('\n    ')}
   </nav>
 </header>`;
@@ -166,7 +166,7 @@ function build({ quiet = false } = {}) {
       `<meta name="description" content="${esc(description)}">`,
       noindex ? '<meta name="robots" content="noindex">' : '',
       canonical ? `<link rel="canonical" href="${esc(canonical)}">` : '',
-      '<meta name="theme-color" content="#C5B3D3">',
+      '<meta name="theme-color" content="#DBD0E6">',
       `<meta property="og:title" content="${esc(title)}">`,
       `<meta property="og:description" content="${esc(description)}">`,
       '<meta property="og:type" content="website">',
