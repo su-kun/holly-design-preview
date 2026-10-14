@@ -1,30 +1,16 @@
 {
   "site": {
-    "url": "https://holly-design-preview.pages.dev",
+    "url": "",
     "name": "healing salon Holly",
     "nav": [
-      {
-        "label": "サービス",
-        "path": "/service/"
-      },
-      {
-        "label": "アクセス",
-        "path": "/access/"
-      },
-      {
-        "label": "営業カレンダー",
-        "path": "/calendar/"
-      },
-      {
-        "label": "よくある質問",
-        "path": "/qanda/"
-      },
-      {
-        "label": "店内ギャラリー",
-        "path": "/gallery/"
-      }
+      { "label": "サービス", "path": "/service/" },
+      { "label": "アクセス", "path": "/access/" },
+      { "label": "営業カレンダー", "path": "/calendar/" },
+      { "label": "よくある質問", "path": "/qanda/" },
+      { "label": "店内ギャラリー", "path": "/gallery/" }
     ]
   },
+
   "pages": {
     "index": {
       "title": "赤羽のリラクゼーションサロン healing salon Holly【女性向け・個室】",
@@ -51,18 +37,17 @@
       "description": "healing salon Holly の外観・店内・施術の様子をご覧いただけます。"
     }
   },
+
   "business_name": "healing salon Holly",
   "business_type": "女性向けリラクゼーションサロン",
+
   "location": {
     "address": "東京都北区赤羽2-17-10 1階 Vinca hair 内個室",
     "postal_code": "115-0045",
     "region": "東京都",
     "locality": "北区",
     "street": "赤羽2-17-10 1階 Vinca hair 内",
-    "geo": {
-      "lat": 35.7803,
-      "lng": 139.7204
-    },
+    "geo": { "lat": 35.7803, "lng": 139.7204 },
     "walking_distance": "赤羽駅から徒歩5分（330m）",
     "entrance_note": "Vinca hair の入口よりお入りください",
     "map_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.799773592114!2d139.7204322757921!3d35.780294472555504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601893006fbaa9fb%3A0x82603ff27e54dd07!2shealing%20salon%20Holly!5e0!3m2!1sja!2sjp!4v1790201908299!5m2!1sja!2sjp",
@@ -93,22 +78,17 @@
     ],
     "catchment_text": "北区・足立区・豊島区・荒川区・文京区や、埼玉県の川口市・戸田市・草加市・越谷市からも、お越しいただきやすい場所です。",
     "catchment_areas": [
-      "東京都北区",
-      "東京都足立区",
-      "東京都豊島区",
-      "東京都荒川区",
-      "東京都文京区",
-      "埼玉県川口市",
-      "埼玉県戸田市",
-      "埼玉県草加市",
-      "埼玉県越谷市"
+      "東京都北区", "東京都足立区", "東京都豊島区", "東京都荒川区", "東京都文京区",
+      "埼玉県川口市", "埼玉県戸田市", "埼玉県草加市", "埼玉県越谷市"
     ]
   },
+
   "contact": {
     "phone_display": "080-6994-3937",
     "phone_tel": "08069943937",
     "phone_e164": "+81-80-6994-3937"
   },
+
   "links": {
     "reserve": "https://stekina.com/profile/PDXH-7SJ9",
     "line": "https://line.me/R/ti/p/@868opjpk",
@@ -117,30 +97,27 @@
     "x": "https://x.com/healer_holly",
     "google_maps": "https://maps.app.goo.gl/tqmshzQH4X1WLdEo7"
   },
+
   "hours": {
     "days": "月〜土",
     "time": "11:00-17:00",
     "opens": "11:00",
     "closes": "17:00",
-    "open_days_en": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-    ],
+    "open_days_en": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
     "closed": "日曜日・祝日",
     "irregular": "不定休あり"
   },
+
   "price_range": "¥2,000 - ¥8,000",
   "price_note": "表示価格はすべて税込です。",
   "disclaimer": "当サロンはリラクゼーションを目的としたサービスです。医療行為ではありません。",
+
   "concept": [
     "家事、育児、仕事……誰かのために奔走する毎日のなかで、最後に自分のための時間を過ごしたのはいつだっただろう――。そんなふうに思う方に、ゆっくり休んでいただける場所をつくりました。",
     "ドアを開けた瞬間、日常の慌ただしさから少し離れて、ご自身をいたわる時間を過ごしていただけたら嬉しいです。毎日を頑張る女性のために、healing salon Holly は生まれました。",
     "施術は、大手サロンで経験を積み、新人の頃から指名が絶えなかったセラピストが、マンツーマンで担当します。いつお越しいただいても、丁寧で安定した施術をお届けできるよう心がけています。"
   ],
+
   "target_customers": [
     "仕事や家事で疲れている女性",
     "リラクゼーションを受けたい方",
@@ -149,47 +126,30 @@
     "お子さんがいて、リラクゼーションサロンへの来店を諦めたことのある方",
     "お子さんがいて、なかなか自分の時間が取れない方"
   ],
+
   "forte": [
     "ご来店の際は、お疲れが溜まりやすい部位などを伺いながら、ひとつひとつ丁寧にほぐしていきます。平日の忙しさで残った緊張を、ゆっくりゆるめていく時間をお過ごしください。",
     "ご褒美におすすめのコースのひとつが、フットリフレクソロジー60分＋バックショルダー30分の90分コース。足から首・肩までをまとめてケアできます。",
     "しっかり時間をとりたい日には、ボディヒーリング60分＋フットリフレクソロジー45分＋クイックハンド15分の120分ロングコースもおすすめです。",
     "施術だけでなく、日々の悩みやこれまでのこと、これからのことをお話しする場としても、気軽にお使いください。皆さまにお会いできる日を楽しみにしています。"
   ],
+
   "personal_title": "サロンオーナー・セラピスト 三﨑の好きなこと",
   "personal": [
     "ディズニー・サバイバルオーディション番組（JO1・INI・ME:I・HANA・KOIKEYZ）",
     "他にもどんなことでもお話しください♪"
   ],
+
   "services": [
     {
       "name": "ボディヒーリング",
       "image": "body.webp",
       "image_alt": "ボディヒーリングの施術の様子",
       "menu_items": [
-        {
-          "name": "クイックボディ",
-          "description": "上半身 or 下半身",
-          "duration_minutes": 15,
-          "price_yen": 2000
-        },
-        {
-          "name": "ボディヒーリング",
-          "description": "上半身 or 下半身",
-          "duration_minutes": 30,
-          "price_yen": 4000
-        },
-        {
-          "name": "ボディヒーリング",
-          "description": "うつ伏せ全身",
-          "duration_minutes": 45,
-          "price_yen": 6000
-        },
-        {
-          "name": "ボディヒーリング",
-          "description": "全身",
-          "duration_minutes": 60,
-          "price_yen": 8000
-        }
+        { "name": "クイックボディ", "description": "上半身 or 下半身", "duration_minutes": 15, "price_yen": 2000 },
+        { "name": "ボディヒーリング", "description": "上半身 or 下半身", "duration_minutes": 30, "price_yen": 4000 },
+        { "name": "ボディヒーリング", "description": "うつ伏せ全身", "duration_minutes": 45, "price_yen": 6000 },
+        { "name": "ボディヒーリング", "description": "全身", "duration_minutes": 60, "price_yen": 8000 }
       ]
     },
     {
@@ -197,30 +157,10 @@
       "image": "foot.webp",
       "image_alt": "フットリフレクソロジーの施術の様子",
       "menu_items": [
-        {
-          "name": "クイックフット",
-          "description": "足裏・ふくらはぎ",
-          "duration_minutes": 15,
-          "price_yen": 2000
-        },
-        {
-          "name": "フットリフレクソロジー",
-          "description": "足裏・ふくらはぎ",
-          "duration_minutes": 30,
-          "price_yen": 4000
-        },
-        {
-          "name": "フットリフレクソロジー",
-          "description": "足裏・ふくらはぎ・太もも",
-          "duration_minutes": 45,
-          "price_yen": 6000
-        },
-        {
-          "name": "フットリフレクソロジー",
-          "description": "足裏・ふくらはぎ・太もも",
-          "duration_minutes": 60,
-          "price_yen": 8000
-        }
+        { "name": "クイックフット", "description": "足裏・ふくらはぎ", "duration_minutes": 15, "price_yen": 2000 },
+        { "name": "フットリフレクソロジー", "description": "足裏・ふくらはぎ", "duration_minutes": 30, "price_yen": 4000 },
+        { "name": "フットリフレクソロジー", "description": "足裏・ふくらはぎ・太もも", "duration_minutes": 45, "price_yen": 6000 },
+        { "name": "フットリフレクソロジー", "description": "足裏・ふくらはぎ・太もも", "duration_minutes": 60, "price_yen": 8000 }
       ]
     },
     {
@@ -228,24 +168,9 @@
       "image": "shoulder.webp",
       "image_alt": "バックショルダーの施術の様子",
       "menu_items": [
-        {
-          "name": "クイックバック",
-          "description": "肩",
-          "duration_minutes": 15,
-          "price_yen": 2000
-        },
-        {
-          "name": "ネックショルダー",
-          "description": "首・肩",
-          "duration_minutes": 15,
-          "price_yen": 2000
-        },
-        {
-          "name": "バックショルダー",
-          "description": "首・肩・後頭部・肩甲骨",
-          "duration_minutes": 30,
-          "price_yen": 4000
-        }
+        { "name": "クイックバック", "description": "肩", "duration_minutes": 15, "price_yen": 2000 },
+        { "name": "ネックショルダー", "description": "首・肩", "duration_minutes": 15, "price_yen": 2000 },
+        { "name": "バックショルダー", "description": "首・肩・後頭部・肩甲骨", "duration_minutes": 30, "price_yen": 4000 }
       ]
     },
     {
@@ -253,18 +178,8 @@
       "image": "hand.webp",
       "image_alt": "ハンドリフレクソロジーの施術の様子",
       "menu_items": [
-        {
-          "name": "クイックハンド",
-          "description": "手指・前腕",
-          "duration_minutes": 15,
-          "price_yen": 2000
-        },
-        {
-          "name": "ハンドリフレクソロジー",
-          "description": "手指・前腕・上腕",
-          "duration_minutes": 30,
-          "price_yen": 4000
-        }
+        { "name": "クイックハンド", "description": "手指・前腕", "duration_minutes": 15, "price_yen": 2000 },
+        { "name": "ハンドリフレクソロジー", "description": "手指・前腕・上腕", "duration_minutes": 30, "price_yen": 4000 }
       ]
     },
     {
@@ -273,75 +188,31 @@
       "image_alt": "フェイスヒーリングの施術の様子",
       "image_position": "50% 50%",
       "menu_items": [
-        {
-          "name": "フェイスヒーリング",
-          "description": "顔",
-          "duration_minutes": 15,
-          "price_yen": 2000
-        },
-        {
-          "name": "フェイスヒーリング",
-          "description": "顔・頭",
-          "duration_minutes": 30,
-          "price_yen": 4000
-        }
+        { "name": "フェイスヒーリング", "description": "顔", "duration_minutes": 15, "price_yen": 2000 },
+        { "name": "フェイスヒーリング", "description": "顔・頭", "duration_minutes": 30, "price_yen": 4000 }
       ]
     }
   ],
+
   "gallery": [
-    {
-      "file": "1.webp",
-      "alt": "Vinca hair の店舗外観"
-    },
-    {
-      "file": "2.webp",
-      "alt": "入口まわりの植栽と Vinca の看板"
-    },
-    {
-      "file": "3.webp",
-      "alt": "Vinca hair の看板とスタンド看板"
-    },
-    {
-      "file": "4.webp",
-      "alt": "Vinca hair 店内の様子"
-    },
-    {
-      "file": "5.webp",
-      "alt": "壁に飾られたアートとランタン"
-    },
-    {
-      "file": "6.webp",
-      "alt": "花瓶や観葉植物、アートが飾られたコーナー"
-    },
-    {
-      "file": "7.webp",
-      "alt": "個室へ続く廊下とドア"
-    },
-    {
-      "file": "8.webp",
-      "alt": "個室のベッドとタオル"
-    },
-    {
-      "file": "9.webp",
-      "alt": "施術ベッドのある個室"
-    },
-    {
-      "file": "10.webp",
-      "alt": "ベッドの上のタオルと観葉植物"
-    },
-    {
-      "file": "11.webp",
-      "alt": "アロマディフューザーと花"
-    }
+    { "file": "1.webp", "alt": "Vinca hair の店舗外観" },
+    { "file": "2.webp", "alt": "入口まわりの植栽と Vinca の看板" },
+    { "file": "3.webp", "alt": "Vinca hair の看板とスタンド看板" },
+    { "file": "4.webp", "alt": "Vinca hair 店内の様子" },
+    { "file": "5.webp", "alt": "壁に飾られたアートとランタン" },
+    { "file": "6.webp", "alt": "花瓶や観葉植物、アートが飾られたコーナー" },
+    { "file": "7.webp", "alt": "個室へ続く廊下とドア" },
+    { "file": "8.webp", "alt": "個室のベッドとタオル" },
+    { "file": "9.webp", "alt": "施術ベッドのある個室" },
+    { "file": "10.webp", "alt": "ベッドの上のタオルと観葉植物" },
+    { "file": "11.webp", "alt": "アロマディフューザーと花" }
   ],
+
   "faq": [
     {
       "question": "営業日・営業時間を教えてください。",
       "answer": "月曜日〜土曜日の 11:00〜17:00 です。日曜日・祝日は定休日で、不定休の日もあります。営業カレンダーをご確認ください。",
-      "link": {
-        "label": "営業カレンダーを見る",
-        "path": "/calendar/"
-      }
+      "link": { "label": "営業カレンダーを見る", "path": "/calendar/" }
     },
     {
       "question": "予約は必要ですか？",
@@ -378,10 +249,7 @@
     {
       "question": "赤羽駅からどう行けばいいですか？",
       "answer": "アクセスページに、赤羽駅東口からの道順をご案内しています。",
-      "link": {
-        "label": "アクセスを見る",
-        "path": "/access/"
-      }
+      "link": { "label": "アクセスを見る", "path": "/access/" }
     },
     {
       "question": "支払い方法は？",
