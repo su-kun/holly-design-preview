@@ -829,3 +829,47 @@ main h2::after,
   .qaa-area { width: calc(100% - 2rem); }
   .gallery-grid { width: calc(100% - 2rem); }
 }
+
+
+/* Holly v0.4.1 — 背景はロゴの地色、白藤色はアクセントに限定 */
+:root {
+  --holly-bg: #F8F5F7;
+  --holly-accent: #DBD0E6;
+  --holly-pink: #C28EAF;
+  --holly-pink-deep: #80556F;
+}
+html, body { background-color: #F8F5F7; }
+header { background: #F8F5F7; }
+/* 白藤色はバッジ・予約導線・カレンダー操作などのアクセントに */
+.menu-duration {
+  background: #DBD0E6;
+  color: #5D4A70;
+  border-radius: 3px;
+}
+.links ul:first-child li:first-child a,
+.links ul:first-child li:first-child a:link,
+.links ul:first-child li:first-child a:visited {
+  display: inline-block;
+  padding: 0.45rem 0.8rem;
+  background: #DBD0E6;
+  color: #39343B;
+  text-decoration: none;
+  font-weight: 500;
+}
+.links ul:first-child li:first-child a:hover { opacity: 0.8; }
+.cal-pager a,
+#calendar nav li a,
+.cal-pager a:link,
+.cal-pager a:visited,
+#calendar nav li a:link,
+#calendar nav li a:visited {
+  display: inline-block;
+  padding: 0.35rem 0.7rem;
+  border: 0;
+  border-radius: 3px;
+  background: #DBD0E6;
+  color: #39343B;
+  text-decoration: none;
+}
+.cal-pager a:hover, #calendar nav li a:hover { opacity: 0.8; }
+.cal-table td.kyu, .cal-legend .legend-box { background-color: #DBD0E6; }
