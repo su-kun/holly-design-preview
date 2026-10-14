@@ -873,3 +873,26 @@ header { background: #F8F5F7; }
 }
 .cal-pager a:hover, #calendar nav li a:hover { opacity: 0.8; }
 .cal-table td.kyu, .cal-legend .legend-box { background-color: #DBD0E6; }
+
+/* Holly v0.4.2 — 白藤色は必要な操作・情報のアクセントに限定 */
+:root {
+  --holly-bg: #F8F5F7;
+  --holly-accent: #DBD0E6;
+}
+html, body { background-color: #F8F5F7; }
+header, footer { background-color: #F8F5F7; }
+#cta { background: rgba(248, 245, 247, 0.97); }
+.menu-duration,
+.links ul:first-child li:first-child a,
+.links ul:first-child li:first-child a:link,
+.links ul:first-child li:first-child a:visited,
+.cal-pager a,
+#calendar nav li a,
+.cal-pager a:link,
+.cal-pager a:visited,
+#calendar nav li a:link,
+#calendar nav li a:visited,
+.cal-table td.kyu,
+.cal-legend .legend-box {
+  background-color: #DBD0E6;
+}

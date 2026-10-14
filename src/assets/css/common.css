@@ -298,3 +298,13 @@ footer {
   .cta-area { gap: 0.35rem; }
   .cta-btn { font-size: 0.78rem; padding: 0.68em 0.25em; }
 }
+
+/* Holly v0.4.2 — 白藤色はアクセントのみ。ページ背景はロゴの地色に合わせる */
+:root {
+  --holly-bg: #F8F5F7;
+  --holly-accent: #DBD0E6;
+}
+html, body { background-color: #F8F5F7; }
+header { background: #F8F5F7; }
+footer { background: #F8F5F7; }
+#cta { background: rgba(248, 245, 247, 0.97); }
