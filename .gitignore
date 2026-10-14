@@ -1,0 +1,6 @@
+node_modules/
+.DS_Store
+Thumbs.db
+# dist/ は build.mjs が毎回作り直す生成物。Cloudflare Pages に Git 連携でビルドさせる場合は無視してよい。
+# ブラウザからフォルダをアップロードする方式の場合は dist/ をそのまま使うので、この行を消す。
+dist/
