@@ -192,3 +192,28 @@ footer .footer-copy {
 	font-size: 15px;
 	text-align: center;
 }
+
+
+/* Holly refined design v0.3 — soft, uncluttered, botanical accents */
+:root{--holly-ink:#514b50;--holly-muted:#776e75;--holly-pink:#b9a2b5;--holly-pink-deep:#92788e;--holly-bg:#fbf8f7;--holly-line:#e9e0e5;--holly-lilac:#f2eaf0;}
+html{scroll-behavior:smooth;}
+body{font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;background:var(--holly-bg);color:var(--holly-ink);line-height:1.85;letter-spacing:.015em;}
+h1,h2,h3,h4,p{color:inherit;}
+h1{font-size:clamp(1.8rem,3vw,2.4rem);font-weight:500;letter-spacing:.025em;}
+h2{font-size:clamp(1.45rem,2.5vw,1.9rem);font-weight:500;letter-spacing:.035em;}
+h3{font-size:clamp(1.15rem,2vw,1.45rem);font-weight:500;}
+p{font-size:1rem;}
+a,a:link,a:visited{color:inherit;}
+a{transition:opacity .2s ease,background-color .2s ease;}
+header{padding:1rem 5%;gap:1.5rem;border-bottom:1px solid rgba(185,162,181,.2);background:rgba(251,248,247,.95);}
+header img{height:76px;}
+header nav{font-size:.95rem;gap:.5rem 1.4rem;color:var(--holly-muted);}
+header nav a[aria-current="page"]{border-bottom:1px solid var(--holly-pink-deep);}
+footer{background:#f0e7ed;color:var(--holly-ink);padding:1.8rem 5%;}
+#cta{background:rgba(251,248,247,.96);border-top:1px solid var(--holly-line);backdrop-filter:blur(8px);}
+.cta-area{gap:.55rem;}
+.cta-btn{font-size:1rem;border:1px solid transparent;border-radius:999px;padding:.7em 1em;font-weight:500;}
+.btn-reserve{background:#b9a2b5;border-color:#b9a2b5;color:#fff!important;}
+.btn-line{background:#f0e8ee;border-color:#e4d6e1;color:var(--holly-ink)!important;}
+.btn-tel{background:#fff;border-color:#d8c9d5;color:var(--holly-ink)!important;}
+@media(max-width:640px){header{padding:.75rem 4%;}header img{height:62px}.cta-area{gap:.35rem}.cta-btn{font-size:.78rem;padding:.72em .25em;}}
