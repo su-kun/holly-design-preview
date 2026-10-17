@@ -1,6 +1,6 @@
 {
   "name": "healing-salon-holly",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "private": true,
   "type": "module",
   "description": "healing salon Holly 公式サイト（静的サイトジェネレータ）",

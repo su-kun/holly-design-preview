@@ -483,10 +483,11 @@ ${list}
     const p = biz.pages.qanda;
     const items = biz.faq
       .map(
-        (f) => `    <div class="qaa-list">
-      <p class="qaa question">${esc(f.question)}</p>
-      <p class="qaa answer">${esc(f.answer)}</p>${f.link ? `\n      <p class="qaa-link"><a class="text-link" href="${f.link.path}">${esc(f.link.label)}</a></p>` : ''}
-    </div>`,
+        (f, i) => `    <details class="qaa-item">
+      <summary class="qaa-question"><span class="qaa-number">Q${i + 1}</span><span>${esc(f.question)}</span><span class="qaa-toggle" aria-hidden="true"></span></summary>
+      <div class="qaa-answer"><p>${esc(f.answer)}</p>${f.link ? `\n        <p class="qaa-link"><a class="text-link" href="${esc(f.link.path)}"${extAttr(f.link.path)}>${esc(f.link.label)} →</a></p>` : ''}
+      </div>
+    </details>`,
       )
       .join('\n');
     emit(
@@ -499,6 +500,10 @@ ${list}
   <h2>よくある質問</h2>
   <div class="qaa-area">
 ${items}
+  </div>
+  <div class="qanda-contact">
+    <p>ほかにも気になることがございましたら、<br>お気軽にお問い合わせください。</p>
+    <a class="text-link" href="${L.line}"${extAttr(L.line)}>ご予約・お問い合わせ →</a>
   </div>
 </section>`,
       }),

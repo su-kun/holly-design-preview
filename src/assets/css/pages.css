@@ -436,39 +436,92 @@ address {
     font-size: 17px;
 }
 
-/* qanda.php */
-.qaa-area {
-    margin: 2em auto;
-    width: 75%;
+/* FAQ — scoped to this page so other v03 page styles remain unchanged */
+#qanda {
+    width: min(100% - 2rem, 760px);
+    margin: 2.5rem auto 3.5rem;
 }
-.qaa-list {
-    margin: 1em 0;
-    padding: 1.5em;
-    background-color: white;
-    border: 1px solid gray;
-    border-radius: 10px;
+#qanda h2 { margin-bottom: 1.6rem; }
+#qanda .qaa-area {
+    width: 100%;
+    margin: 0 auto;
 }
-.question::before {
-    content: "Q : ";
-    color: navy;
-    font-size: larger;
+#qanda .qaa-item {
+    border: 0;
+    border-bottom: 1px solid #ded2e2;
+    margin: 0;
+    padding: 0;
+    background: transparent;
 }
-.answer::before {
-    content: "A : ";
-    color: red;
-    font-size: larger;
+#qanda .qaa-item:first-child { border-top: 1px solid #ded2e2; }
+#qanda .qaa-question {
+    list-style: none;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 2.1rem minmax(0, 1fr) 1.1rem;
+    align-items: center;
+    gap: .6rem;
+    padding: 1rem 0;
+    color: #514b50;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.75;
 }
-.question {
-    font-weight: bold;
-    font-size: 22.5px;
-    margin-bottom: 0.25em;
+#qanda .qaa-question::-webkit-details-marker { display: none; }
+#qanda .qaa-number {
+    color: #92788e;
+    font-size: .9rem;
+    font-weight: 600;
+    letter-spacing: .02em;
 }
-.answer {
-    font-size: 20px;
+#qanda .qaa-toggle {
+    width: .85rem;
+    height: .85rem;
+    position: relative;
+    justify-self: end;
 }
-.qaa-link {
-    margin-top: 0.5em;
-    font-size: 17px;
+#qanda .qaa-toggle::before,
+#qanda .qaa-toggle::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: .75rem;
+    height: 1px;
+    background: #92788e;
+    transform: translate(-50%, -50%);
+}
+#qanda .qaa-toggle::after { transform: translate(-50%, -50%) rotate(90deg); transition: transform .18s ease; }
+#qanda details[open] .qaa-toggle::after { transform: translate(-50%, -50%) rotate(0); }
+#qanda .qaa-answer {
+    padding: 0 1.7rem 1.15rem 2.7rem;
+    color: #625a61;
+    font-size: .94rem;
+    line-height: 1.95;
+}
+#qanda .qaa-answer p { margin: 0; }
+#qanda .qaa-answer p + p { margin-top: .6rem; }
+#qanda .qaa-link { font-size: .88rem; }
+#qanda .qanda-contact {
+    margin: 2rem 0 0;
+    text-align: center;
+    padding: 1.2rem .5rem 0;
+}
+#qanda .qanda-contact p {
+    margin: 0 0 .55rem;
+    color: #625a61;
+    font-size: .94rem;
+    line-height: 1.9;
+}
+#qanda .qanda-contact .text-link {
+    font-size: .88rem;
+    text-underline-offset: .22em;
+}
+@media (max-width: 700px) {
+    #qanda { width: calc(100% - 32px); margin: 2rem auto 3rem; }
+    #qanda h2 { margin-bottom: 1.2rem; }
+    #qanda .qaa-question { padding: 1rem 0; gap: .45rem; grid-template-columns: 1.9rem minmax(0, 1fr) 1rem; }
+    #qanda .qaa-answer { padding: 0 .25rem 1rem 2.3rem; font-size: .92rem; }
 }
 
 /* gallery.php */
