@@ -1,6 +1,6 @@
 {
   "site": {
-    "url": "https://holly-design-preview.pages.dev/",
+    "url": "https://holly-design-preview.pages.dev",
     "name": "healing salon Holly",
     "nav": [
       {
@@ -119,7 +119,7 @@
   },
   "hours": {
     "days": "月〜土",
-    "time": "11:00-17:00",
+    "time": "11:00 - 17:00",
     "opens": "11:00",
     "closes": "17:00",
     "open_days_en": [

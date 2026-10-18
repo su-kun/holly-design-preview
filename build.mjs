@@ -89,7 +89,7 @@ function build({ quiet = false } = {}) {
   const nav = biz.site.nav;
   const tel = biz.contact.phone_tel;
   const h = biz.hours;
-  const hoursLine = `${h.days} ${h.time} ／ 定休日：${h.closed}・${h.irregular}`;
+  const hoursLine = `営業日 : ${h.days} / 営業時間 : ${h.time} / 定休日 : ${h.closed}・${h.irregular}`;
 
   fs.rmSync(DIST, { recursive: true, force: true });
   copyDir(path.join(SRC, 'assets'), DIST);
@@ -274,38 +274,46 @@ ${cta()}
         const imgFile = path.join(SRC, 'assets/images/service', s.image);
         if (!fs.existsSync(imgFile)) fail(`サービス画像が見つかりません: images/service/${s.image}（${s.name}）`);
         const items = s.menu_items
-          .map(
-            (m) => `        <div class="menu-item">
-          <div class="menu-item-1">
-            <h4 class="menu-name">${esc(m.name)}</h4>
-            <p class="menu-description">${esc(m.description)}</p>
+          .map((m) => `        <details class="menu-detail">
+          <summary class="menu-detail-summary">
+            <span class="menu-detail-name">${esc(m.name)}</span>
+            <span class="menu-detail-meta"><span class="menu-duration">${m.duration_minutes}分</span><span class="menu-price">${yen(m.price_yen)}</span></span>
+            <span class="menu-detail-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="menu-detail-body">
+            <p>${esc(m.description)}</p>
           </div>
-          <div class="menu-item-2">
-            <span class="menu-duration">${m.duration_minutes}分</span>
-            <span class="menu-price">${yen(m.price_yen)}</span>
-          </div>
-        </div>`,
-          )
+        </details>`)
           .join('\n');
         const pos = s.image_position ? ` style="object-position:${esc(s.image_position)}"` : '';
-        return `  <div class="service-row${i % 2 === 1 ? ' service-row--reverse' : ''}">
-    <article>
-      <div class="service-name"><h3>${esc(s.name)}</h3></div>
+        return `  <details class="service-accordion${i % 2 === 1 ? ' service-accordion--reverse' : ''}"${i === 0 ? '' : ''}>
+    <summary class="service-accordion-summary">
+      <span class="service-accordion-title">${esc(s.name)}</span>
+      <span class="service-accordion-photo"><img src="/images/service/${esc(s.image)}" alt="${esc(s.image_alt ?? '')}"${pos} loading="lazy" decoding="async"></span>
+      <span class="service-accordion-hint">メニューと詳細を見る</span>
+      <span class="service-accordion-toggle" aria-hidden="true"></span>
+    </summary>
+    <div class="service-accordion-content">
       <div class="menu-items">
 ${items}
       </div>
-    </article>
-    <figure class="service-photo">
-      <img src="/images/service/${esc(s.image)}" alt="${esc(s.image_alt ?? '')}"${pos} loading="lazy" decoding="async">
-    </figure>
-  </div>`;
+    </div>
+  </details>`;
       })
       .join('\n');
     const body = `<section id="service">
-  <h2>サービス</h2>
+  <h2>サービス・料金</h2>
   <p class="price-note">${esc(biz.price_note)}</p>
+  <p class="service-intro">どのメニューが合うか迷われる場合も、お気軽にご相談ください。</p>
+  <div class="service-guidance" aria-label="メニューのご案内">
+    <p class="service-guidance-action">タップしていただくと、メニューの詳細をご覧いただけます。</p>
+    <p class="service-guidance-consult">施術内容やお疲れの箇所については、ご来店時にお気軽にご相談ください。</p>
+  </div>
+  <div class="service-accordion-list">
 ${rows}
+  </div>
   <p class="disclaimer">${esc(biz.disclaimer)}</p>
+  <p class="service-contact"><a href="${esc(L.line)}" target="_blank" rel="noopener">メニューについて相談する →</a></p>
 </section>`;
     emit('/service/', layout({ path: '/service/', title: p.title, description: p.description, body }));
   }
@@ -384,33 +392,36 @@ ${rows}
       return `${y}年${m}月`;
     };
 
-    // 一覧
-    const years = [...new Set(published.map((m) => m.ym.slice(0, 4)))];
-    const list = published.length
-      ? years
-          .map(
-            (y) => `  <h3>${y}年</h3>
-  <ul>
-    ${published
-      .filter((m) => m.ym.startsWith(y))
-      .map((m) => `<li><a href="/calendar/${m.ym}/">${Number(m.ym.slice(5))}月</a></li>`)
-      .join('\n    ')}
-  </ul>`,
-          )
-          .join('\n')
-      : '  <p class="cal-lead">営業カレンダーは準備中です。</p>';
+    // 最新の営業カレンダー。未公開月の予定はHTMLに出力しない。
+    const calendarPublicData = Object.fromEntries(published.map((m) => [m.ym, {
+      closed: m.closed ?? [],
+      memo: m.memo ?? {},
+    }]));
+    const calendarScriptData = JSON.stringify(calendarPublicData).replace(/</g, '\\u003c');
     emit(
       '/calendar/',
       layout({
         path: '/calendar/',
         title: p.title,
         description: p.description,
-        body: `<section id="calendar">
+        body: `<section id="holly-calendar">
   <h2>営業カレンダー</h2>
-  <p class="cal-lead">${esc(hoursLine)}</p>
-  <nav aria-label="月を選ぶ">
-${list}
-  </nav>
+  <p class="holly-cal-hours">営業時間 11:00〜17:00 ／ 日曜日・祝日・不定休</p>
+  <p class="holly-cal-intro">営業日・休業日をご確認いただけます。</p>
+  <div class="holly-cal-wrapper">
+    <div class="holly-cal-nav" aria-label="表示する月">
+      <button id="holly-cal-prev" type="button" aria-label="前の月">‹</button>
+      <h3 id="holly-cal-month" aria-live="polite"></h3>
+      <button id="holly-cal-next" type="button" aria-label="次の月">›</button>
+    </div>
+    <div id="holly-cal-body" aria-live="polite"></div>
+    <div class="holly-cal-legend"><span><i class="holly-cal-legend-open"></i>営業日</span><span><i class="holly-cal-legend-closed"></i>休業日</span><span><i class="holly-cal-legend-today"></i>今日</span><span><i class="holly-cal-legend-memo"></i>お知らせあり</span></div>
+    <div id="holly-cal-memo" class="holly-cal-memo" hidden aria-live="polite"></div>
+    <p class="holly-cal-notice">ご予約の空き状況につきましては、<br>お気軽にお問い合わせください。</p>
+    <p class="holly-cal-contact"><a class="text-link" href="${esc(L.line ?? L.reserve)}"${extAttr(L.line ?? L.reserve)}>ご予約・お問い合わせ →</a></p>
+  </div>
+  <script id="holly-cal-data" type="application/json">${calendarScriptData}</script>
+  <script src="/js/holly-calendar.js" defer></script>
 </section>`,
       }),
     );

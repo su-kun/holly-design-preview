@@ -1,74 +1,52 @@
 @charset "UTF-8";
 
-/* ---- 基本 ------------------------------------------------------------ */
+
+html {
+	scroll-behavior: smooth;
+}
 body {
 	font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
-	background-color: #F8F5F7;
-	margin: 0;
-	/* 画面下に固定された予約ボタンの高さぶん、最後のコンテンツが隠れないようにする */
-	padding-bottom: 96px;
+	padding-bottom: calc(var(--cta-height) + env(safe-area-inset-bottom, 0px));
+	background: var(--holly-bg);
+	color: var(--holly-ink);
+	line-height:1.85;
+	letter-spacing: 0.015em;
 }
-
-h1 {
-	font-size: 40px;
-	margin: 0;
+main {margin: 0 auto;}
+:root {
+	/* 下部固定CTAの高さ。bodyの余白にも共通利用 */
+	--cta-height: 76px;
+	--holly-ink: #514b50;
+	--holly-muted: #776e75;
+	--holly-pink: #b9a2b5;
+	--holly-pink-deep: #92788e;
+	--holly-bg: #fbf8f7;
+	--holly-line: #e9e0e5;
+	--holly-lilac: #f2eaf0;
 }
+h1, h3, h4, p {color:inherit;margin: 0;padding: 0;}
 h2 {
-	font-size: 32.5px;
-	margin: 0;
-}
-h3 {
-	font-size: 27.5px;
-	margin: 0;
-}
-h4 {
-	font-size: 22.5px;
-	margin: 0;
-}
-p {
-	font-size: 17.5px;
-	margin: 0;
-}
-a {
-	color: inherit;
-	text-decoration: none;
-}
-a:link {
-	color: black;
-	text-decoration: none;
-}
-a:visited {
-	color: black;
-	text-decoration: none;
-}
-a:hover {
-	opacity: 0.75;
-	text-decoration: none;
-}
-ul {
-	margin: 0;
+	font-size: 30px;
+	text-align: center;
+    margin: 1em auto;
 	padding: 0;
 }
-li {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-img {
-	max-width: 100%;
-}
+a, a:link, a:visited {color:inherit;text-decoration: none;}
+ul, li {margin: 0;padding: 0;}
+li {list-style-type: none;}
+img {max-width: 100%;}
 
-/* ---- ヘッダー --------------------------------------------------------- */
 header {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
 	margin: 0 auto;
-	padding: 0.5em 0;
+	padding: 1em 10%;
+	gap: 1.5em;
 }
 header img {
 	display: block;
-	height: 100px;
+	height: 125px;
 	width: auto;
 }
 header nav {
@@ -76,10 +54,11 @@ header nav {
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 0.5em 2em;
-	font-size: 20px;
+	font-size: 18.5px;
 }
 header nav a[aria-current="page"] {
-	border-bottom: 2px solid #C5B3D3;
+	border-bottom: 3px solid var(--holly-pink-deep);
+	padding-bottom: 0.4em;
 }
 
 @media screen and (max-width: 768px) {
@@ -103,11 +82,16 @@ header nav a[aria-current="page"] {
 	}
 }
 
-/* ---- フッター --------------------------------------------------------- */
 footer {
 	background-color: #C5B3D3;
 	padding: 1.25em 5%;
 	text-align: center;
+}
+footer {
+	background: #f0e7ed;
+	color: var(--holly-ink);
+	margin-top: 3.5em;
+	padding: 2em auto;
 }
 footer .footer-note {
 	font-size: 14px;
@@ -119,7 +103,6 @@ footer .footer-copy {
 	color: #404040;
 }
 
-/* ---- 予約ボタン（画面下に固定） ------------------------------------------ */
 #cta {
 	position: fixed;
 	left: 0;
@@ -127,9 +110,8 @@ footer .footer-copy {
 	bottom: 0;
 	z-index: 10;
 	box-sizing: border-box;
-	padding: 0.6em 0.75em calc(0.6em + env(safe-area-inset-bottom, 0px));
-	background: rgba(248, 245, 247, 0.94);
-	border-top: 1px solid #E3DBE7;
+	height: calc(var(--cta-height) + env(safe-area-inset-bottom, 0px));
+	padding: 0.75em 0.6em calc(0.75em + env(safe-area-inset-bottom, 0px));
 }
 .cta-area {
 	display: flex;
@@ -149,26 +131,17 @@ footer .footer-copy {
 	border-radius: 30px;
 	font-weight: bold;
 	white-space: nowrap;
-	padding: 0.45em 1em;
-	font-size: 22px;
+	padding: 0.5em 1em;
+	font-size: 22.5px;
 }
-.btn-reserve {
-	background-color: #CCFFFF;
-	border: 3px solid #B2FFFF;
-}
-.btn-line {
-	background-color: #99FF99;
-	border: 3px solid #84FF84;
-}
-.btn-tel {
-	background-color: #CCCCFF;
-	border: 3px solid #B7B7FF;
-}
+/*
+.btn-reserve {background-color: #CCFFFF;border: 3px solid #B2FFFF;}
+.btn-line {background-color: #99FF99;border: 3px solid #84FF84;}
+.btn-tel {background-color: #CCCCFF;border: 3px solid #B7B7FF;}
+*/
 
 @media screen and (max-width: 640px) {
-	body {
-		padding-bottom: 84px;
-	}
+	:root { --cta-height: 68px; }
 	.cta-area {
 		gap: 0.4em;
 	}
@@ -181,7 +154,6 @@ footer .footer-copy {
 	}
 }
 
-/* ---- 共通パーツ ------------------------------------------------------- */
 .text-link {
 	text-decoration: underline;
 	text-underline-offset: 0.2em;
@@ -193,27 +165,23 @@ footer .footer-copy {
 	text-align: center;
 }
 
-
 /* Holly refined design v0.3 — soft, uncluttered, botanical accents */
-:root{--holly-ink:#514b50;--holly-muted:#776e75;--holly-pink:#b9a2b5;--holly-pink-deep:#92788e;--holly-bg:#fbf8f7;--holly-line:#e9e0e5;--holly-lilac:#f2eaf0;}
-html{scroll-behavior:smooth;}
-body{font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;background:var(--holly-bg);color:var(--holly-ink);line-height:1.85;letter-spacing:.015em;}
-h1,h2,h3,h4,p{color:inherit;}
-h1{font-size:clamp(1.8rem,3vw,2.4rem);font-weight:500;letter-spacing:.025em;}
-h2{font-size:clamp(1.45rem,2.5vw,1.9rem);font-weight:500;letter-spacing:.035em;}
-h3{font-size:clamp(1.15rem,2vw,1.45rem);font-weight:500;}
-p{font-size:1rem;}
-a,a:link,a:visited{color:inherit;}
-a{transition:opacity .2s ease,background-color .2s ease;}
-header{padding:1rem 5%;gap:1.5rem;border-bottom:1px solid rgba(185,162,181,.2);background:rgba(251,248,247,.95);}
-header img{height:76px;}
-header nav{font-size:.95rem;gap:.5rem 1.4rem;color:var(--holly-muted);}
-header nav a[aria-current="page"]{border-bottom:1px solid var(--holly-pink-deep);}
-footer{background:#f0e7ed;color:var(--holly-ink);padding:1.8rem 5%;}
-#cta{background:rgba(251,248,247,.96);border-top:1px solid var(--holly-line);backdrop-filter:blur(8px);}
 .cta-area{gap:.55rem;}
 .cta-btn{font-size:1rem;border:1px solid transparent;border-radius:999px;padding:.7em 1em;font-weight:500;}
 .btn-reserve{background:#b9a2b5;border-color:#b9a2b5;color:#fff!important;}
 .btn-line{background:#f0e8ee;border-color:#e4d6e1;color:var(--holly-ink)!important;}
 .btn-tel{background:#fff;border-color:#d8c9d5;color:var(--holly-ink)!important;}
-@media(max-width:640px){header{padding:.75rem 4%;}header img{height:62px}.cta-area{gap:.35rem}.cta-btn{font-size:.78rem;padding:.72em .25em;}}
+@media (max-width:640px) {
+	header {
+		padding: 0.75rem 4%;
+	}
+		header img {
+			height:62px
+		} .cta-area {
+			gap:.35rem
+		}
+		.cta-btn {
+			font-size: 0.75rem;
+			padding: 0.72em .25em;
+		}
+	}
