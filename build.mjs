@@ -214,7 +214,8 @@ ${cta()}
   <h1>${esc(biz.business_name)}</h1>
 </section>
 
-<section class="top-des" aria-label="サロンの説明">
+<section class="top-des" aria-label="サロンのご案内">
+  <h2 class="top-des-heading">赤羽の小さなプライベートサロン</h2>
   <p>【ご予約は下記リンクまたはDMから✉︎】</p>
   <p>${esc(biz.business_type)}</p>
   <p>${esc(hoursLine)}</p>
@@ -223,6 +224,7 @@ ${cta()}
 </section>
 
 <section class="links" aria-label="予約・SNS・ページへのリンク">
+  <h2 class="top-links-heading">ご予約・各種ご案内</h2>
   <ul>
     <li><a href="${L.reserve}"${extAttr(L.reserve)}>空き状況を確認する</a></li>
     <li><a href="${L.ekiten}"${extAttr(L.ekiten)}>エキテン</a></li>
@@ -230,6 +232,7 @@ ${cta()}
     <li><a href="${L.x}"${extAttr(L.x)}>X</a></li>
     <li><a href="${L.google_maps}"${extAttr(L.google_maps)}>Google Maps</a></li>
   </ul>
+  <h2 class="top-links-heading top-links-heading--pages">サロンについて</h2>
   <ul>
     ${nav.map((n) => `<li><a href="${n.path}">${esc(n.label)}</a></li>`).join('\n    ')}
   </ul>

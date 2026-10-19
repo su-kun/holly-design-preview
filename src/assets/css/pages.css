@@ -785,3 +785,11 @@ address {
 #holly-calendar .holly-cal-notice { text-align:center; margin:30px auto 8px;line-height:1.9;color:#625962;font-size:.9rem; }
 #holly-calendar .holly-cal-contact { text-align:center;margin:0 auto 2rem;font-size:.86rem; }
 @media (max-width:480px) { #holly-calendar {padding-top:1.2rem;} #holly-calendar .holly-cal-wrapper { margin-top:2rem; } #holly-calendar .holly-cal-day {min-height:52px;padding-top:7px;} #holly-calendar .holly-cal-weekday {padding:8px 0;} #holly-calendar .holly-cal-legend {gap:10px 13px;} }
+
+/* Homepage v04: readability and navigation only; keep the original logo asset untouched. */
+.top-des-heading{margin:0 0 .7rem;font-weight:500;font-size:clamp(1rem,2vw,1.22rem);letter-spacing:.09em;color:var(--holly-pink-deep);line-height:1.8;}
+.top-links-heading{margin:0 auto .6rem;text-align:center;font-size:1rem;font-weight:500;letter-spacing:.08em;color:var(--holly-muted);}
+.top-links-heading--pages{margin-top:1.75rem;}
+.links ul:nth-of-type(2){border-top:1px solid var(--holly-line);padding-top:1rem;}
+@media (min-width:769px){.top_logo{padding-top:3rem}.top-des{margin-top:1.2rem}.links{margin-top:2.1rem;margin-bottom:3.5rem}.links ul{gap:.8rem 1rem}.box{padding-top:4.2rem;padding-bottom:4.2rem}}
+@media (max-width:430px){.top-des-heading{font-size:1rem}.links ul{gap:.55rem}.top-links-heading--pages{margin-top:1.4rem}}
