@@ -112,13 +112,28 @@
 <body>
 <main>
 
+<!-- v05.3: トップ専用のナビゲーションとヒーロー配置。下層ページのheaderは変更しない -->
 <section class="holly-hero" aria-label="Hollyのご案内">
+  <div class="holly-hero-header">
+    <a class="holly-hero-brand" href="/" aria-label="Holly トップページ">
+      <img class="holly-hero-logo" src="/images/logo.png" alt="healing salon Holly 正式ロゴ" width="160" height="160">
+    </a>
+    <nav class="holly-hero-nav" aria-label="トップページのメニュー">
+      <a href="/">ホーム</a>
+      <a href="/service/">サービス</a>
+      <a href="#personal">セラピスト</a>
+      <a href="/calendar/">空き状況</a>
+      <a href="/access/">アクセス</a>
+      <a href="/qanda/">よくある質問</a>
+      <a href="#concept">Hollyについて</a>
+      <a class="holly-hero-reserve" href="https://stekina.com/profile/PDXH-7SJ9" target="_blank" rel="noopener">ご予約</a>
+    </nav>
+  </div>
   <div class="holly-hero-inner">
-    <img class="holly-hero-logo" src="/images/logo.png" alt="healing salon Holly 正式ロゴ" width="160" height="160">
     <p class="holly-hero-eyebrow">赤羽の小さなプライベートサロン</p>
     <h1>深く、やすらぐ。<span>本来のわたしに還る時間。</span></h1>
-    <p class="holly-hero-note">毎日を頑張るあなたに、心ほどけるひとときを。</p>
-    <a class="holly-hero-action" href="/service/">施術メニューを見る <span aria-hidden="true">→</span></a>
+    <p class="holly-hero-note">毎日を頑張るあなたに、<br>心ほどけるひとときを。</p>
+    <a class="holly-hero-action" href="#concept">Hollyについて <span aria-hidden="true">→</span></a>
   </div>
 </section>
 

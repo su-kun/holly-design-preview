@@ -800,14 +800,89 @@ address {
 #holly-calendar .holly-cal-business-hours strong { display:block; color:#62535d; font-weight:400; font-size:1.4rem; letter-spacing:.06em; margin:4px auto; }
 #holly-calendar .holly-cal-notice { margin-top:22px; }
 
-/* v05: top-page layout refinement; color tokens inherited from common.css */
-.holly-hero {min-height: 480px;display:grid;place-items:center;text-align:center;padding:70px 22px 80px;background:linear-gradient(145deg,var(--holly-bg),var(--holly-lilac));position:relative;overflow:hidden}
-.holly-hero:before,.holly-hero:after{content:"";position:absolute;width:150px;height:220px;border:1px solid var(--holly-line);border-radius:85% 0 85% 0;opacity:.65;pointer-events:none;transform:rotate(-24deg)}
-.holly-hero:before{left:-90px;bottom:-75px}.holly-hero:after{right:-100px;top:-90px;transform:rotate(150deg)}
-.holly-hero-inner{position:relative;z-index:1;max-width:720px}.holly-hero-logo{width:136px;height:auto;object-fit:contain;margin:0 auto 20px;display:block}
-.holly-hero-eyebrow{font-size:.85rem;letter-spacing:.16em;color:var(--holly-muted);margin-bottom:20px}
-.holly-hero h1{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-weight:500;font-size:clamp(1.55rem,4vw,2.5rem);line-height:1.8;letter-spacing:.07em}
-.holly-hero h1 span{display:block}.holly-hero-note{margin:20px auto 30px;font-size:.94rem}
-.holly-hero-action{display:inline-block;padding:12px 28px;border:1px solid var(--holly-pink-deep);border-radius:999px;color:var(--holly-ink);background:var(--holly-bg)}
-#concept{margin-top:50px} .links{margin-top:35px;margin-bottom:55px}
-@media(max-width:600px){.holly-hero{min-height:420px;padding:52px 18px 64px}.holly-hero-logo{width:112px}.holly-hero h1{font-size:1.5rem}.holly-hero-note{font-size:.85rem}}
+/* v05.3: トップ上部のみ。写真は三﨑さんの選定後に設定する。 */
+.holly-hero {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 580px;
+  padding: 24px 5% 70px;
+  background: linear-gradient(105deg, var(--holly-bg) 0%, var(--holly-lilac) 100%);
+  position: relative;
+}
+.holly-hero-header {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+}
+.holly-hero-brand { display: block; flex-shrink: 0; }
+.holly-hero-logo { display: block; width: 155px; height: auto; }
+.holly-hero-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px 22px;
+  padding-top: 16px;
+  font-size: 14px;
+}
+.holly-hero-nav a { white-space: nowrap; }
+.holly-hero-nav a:hover { text-decoration: underline; }
+.holly-hero-nav .holly-hero-reserve {
+  padding: 7px 21px;
+  border-radius: 30px;
+  background: var(--holly-pink-deep);
+  color: #fff;
+}
+.holly-hero-inner {
+  box-sizing: border-box;
+  max-width: 1320px;
+  margin: 38px auto 0;
+  padding: 0 0 0 4%;
+  text-align: left;
+}
+.holly-hero-eyebrow {
+  margin-bottom: 16px;
+  color: var(--holly-muted);
+  font-size: 13px;
+  letter-spacing: .1em;
+}
+.holly-hero h1 {
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 35px;
+  font-weight: 400;
+  letter-spacing: .09em;
+  line-height: 1.8;
+}
+.holly-hero h1 span { display: block; }
+.holly-hero-note {
+  margin: 18px 0 26px;
+  font-size: 15px;
+  line-height: 2;
+}
+.holly-hero-action {
+  display: inline-block;
+  padding: 10px 32px;
+  border: 1px solid var(--holly-pink-deep);
+  border-radius: 30px;
+  background: var(--holly-bg);
+}
+@media (max-width: 850px) {
+  .holly-hero-header { align-items: center; flex-direction: column; gap: 10px; }
+  .holly-hero-logo { width: 115px; }
+  .holly-hero-nav { padding-top: 0; justify-content: center; gap: 8px 16px; }
+  .holly-hero-inner { margin-top: 50px; padding-left: 0; text-align: center; }
+  .holly-hero { padding-bottom: 55px; }
+}
+@media (max-width: 520px) {
+  .holly-hero { min-height: 0; padding: 22px 5% 48px; }
+  .holly-hero-logo { width: 100px; }
+  .holly-hero-nav { font-size: 12px; gap: 8px 13px; }
+  .holly-hero-nav .holly-hero-reserve { padding: 5px 15px; }
+  .holly-hero-inner { margin-top: 42px; }
+  .holly-hero h1 { font-size: 23px; }
+  .holly-hero-eyebrow { font-size: 12px; }
+  .holly-hero-note { font-size: 13px; }
+}
