@@ -886,3 +886,17 @@ address {
   .holly-hero-eyebrow { font-size: 12px; }
   .holly-hero-note { font-size: 13px; }
 }
+
+/* v05.4: トップページ限定の写真と余白・植物の線画。既存色変数はそのまま。 */
+.holly-hero-layout{max-width:1240px;margin:28px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,76px);align-items:center}
+.holly-hero-layout .holly-hero-inner{margin:0;padding:0 0 0 4%;min-width:0}
+.holly-hero-photo{margin:0;position:relative;min-width:0}
+.holly-hero-photo img{display:block;width:100%;height:380px;object-fit:cover;object-position:center;border-radius:180px 180px 12px 12px}
+.holly-hero-photo figcaption{margin-top:10px;font-size:11px;letter-spacing:.12em;text-align:right;color:var(--holly-muted)}
+/* 線画は文字を避けて右下に薄く置く。背景や色の確定値には触れない */
+#concept{position:relative;isolation:isolate;overflow:hidden}
+#concept::after{content:"";position:absolute;right:max(2%,calc((100% - 1050px)/2));bottom:18px;width:125px;height:195px;background:url('/images/botanical-line.svg') center/contain no-repeat;opacity:.30;pointer-events:none;z-index:-1}
+#concept.box{padding-top:4.25em;padding-bottom:4.25em}
+#target.box,#forte.box,#personal.box{padding-top:3.7em;padding-bottom:3.7em}
+@media(max-width:850px){.holly-hero-layout{grid-template-columns:1fr;gap:30px;max-width:600px;margin:32px auto 0}.holly-hero-layout .holly-hero-inner{text-align:center;padding:0}.holly-hero-photo{max-width:490px;margin:0 auto;width:100%}.holly-hero-photo img{height:300px}}
+@media(max-width:520px){.holly-hero-layout{margin-top:35px;gap:30px}.holly-hero-photo img{height:240px;border-radius:120px 120px 10px 10px}.holly-hero-photo figcaption{font-size:10px}#concept::after{width:85px;height:130px;right:0;bottom:5px;opacity:.20}#concept.box{padding-top:3.4em;padding-bottom:3.4em}}

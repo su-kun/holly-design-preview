@@ -36,10 +36,7 @@ ul, li {margin: 0;padding: 0;}
 li {list-style-type: none;}
 img {max-width: 100%;}
 
-/* v05.2: ヘッダーの外枠をフッター同様に画面幅いっぱいにする */
 header {
-	box-sizing: border-box;
-	width: 100%;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
@@ -74,7 +71,7 @@ header nav a[aria-current="page"] {
 	header {
 		flex-direction: column;
 		gap: 0.25em;
-		width: 100%;
+		width: 92%;
 	}
 	header img {
 		height: 72px;
@@ -94,7 +91,7 @@ footer {
 	background: #f0e7ed;
 	color: var(--holly-ink);
 	margin-top: 3.5em;
-	padding: 2em 5%;
+	padding: 2em auto;
 }
 footer .footer-note {
 	font-size: 14px;
@@ -188,6 +185,3 @@ footer .footer-copy {
 			padding: 0.72em .25em;
 		}
 	}
-
-/* v05.2: フッターも画面幅いっぱい。余白は既存の5%を使用 */
-footer { box-sizing: border-box; width: 100%; }
