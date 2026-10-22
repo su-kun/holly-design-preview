@@ -112,94 +112,116 @@
 <body>
 <main>
 
-<!-- v05.3: トップ専用のナビゲーションとヒーロー配置。下層ページのheaderは変更しない -->
+<!-- v05.5: Q176–184 トップ構成。写真・ロゴはv05.4の実素材を継承 -->
 <section class="holly-hero" aria-label="Hollyのご案内">
   <div class="holly-hero-header">
     <a class="holly-hero-brand" href="/" aria-label="Holly トップページ">
       <img class="holly-hero-logo" src="/images/logo.png" alt="healing salon Holly 正式ロゴ" width="160" height="160">
     </a>
     <nav class="holly-hero-nav" aria-label="トップページのメニュー">
-      <a href="/">ホーム</a>
+      <a href="/" aria-current="page">ホーム</a>
       <a href="/service/">サービス</a>
-      <a href="#personal">セラピスト</a>
-      <a href="/calendar/">空き状況</a>
       <a href="/access/">アクセス</a>
+      <a href="/calendar/">営業カレンダー</a>
       <a href="/qanda/">よくある質問</a>
+      <a href="/gallery/">店内ギャラリー</a>
+      <a href="#personal">セラピスト</a>
       <a href="#concept">Hollyについて</a>
       <a class="holly-hero-reserve" href="https://stekina.com/profile/PDXH-7SJ9" target="_blank" rel="noopener">ご予約</a>
     </nav>
   </div>
   <div class="holly-hero-layout">
     <div class="holly-hero-inner">
-      <p class="holly-hero-eyebrow">赤羽の小さなプライベートサロン</p>
+      <p class="holly-hero-eyebrow">東京・赤羽のリラクゼーションサロン</p>
       <h1>深く、やすらぐ。<span>本来のわたしに還る時間。</span></h1>
-      <p class="holly-hero-note">毎日を頑張るあなたに、<br>心ほどけるひとときを。</p>
+      <p class="holly-hero-note">忙しい毎日のなかで、<br>ご自身をいたわるひとときを。</p>
       <a class="holly-hero-action" href="#concept">Hollyについて <span aria-hidden="true">→</span></a>
     </div>
     <figure class="holly-hero-photo">
-      <img src="/images/gallery/10.webp" alt="タオルと花を飾った、落ち着いた施術空間のイメージ" width="1400" height="933" fetchpriority="high">
-      <figcaption>サロンの雰囲気</figcaption>
+      <img src="/images/gallery/10.webp" alt="実際の店内に置かれたタオルと植物" width="1400" height="933" fetchpriority="high">
+      <figcaption>写真：Hollyの店内</figcaption>
     </figure>
   </div>
 </section>
 
+<section class="holly-top-service" aria-labelledby="holly-top-service-title">
+  <div class="holly-top-section-heading">
+    <div><p class="holly-top-section-kicker">Treatment menu</p><h2 id="holly-top-service-title">Service <span>サービス</span></h2></div>
+    <a class="holly-top-small-link" href="/service/">すべてのメニュー・料金を見る →</a>
+  </div>
+  <div class="holly-top-service-cards">
+    <a class="holly-top-service-card" href="/service/">
+      <img src="/images/service/body.webp" alt="ボディヒーリングの施術の様子" decoding="async">
+      <span class="holly-top-service-card-name">ボディヒーリング</span>
+      <span class="holly-top-service-card-more">メニュー・料金を見る <span aria-hidden="true">→</span></span>
+    </a>
+    <a class="holly-top-service-card" href="/service/">
+      <img src="/images/service/foot.webp" alt="フットリフレクソロジーの施術の様子" decoding="async">
+      <span class="holly-top-service-card-name">リフレクソロジー</span>
+      <span class="holly-top-service-card-more">メニュー・料金を見る <span aria-hidden="true">→</span></span>
+    </a>
+    <a class="holly-top-service-card" href="/service/">
+      <img src="/images/service/hand.webp" alt="ハンドリフレクソロジーの施術の様子" decoding="async">
+      <span class="holly-top-service-card-name">ハンドリフレクソロジー</span>
+      <span class="holly-top-service-card-more">メニュー・料金を見る <span aria-hidden="true">→</span></span>
+    </a>
+  </div>
+  <p class="holly-top-service-footnote">このほかの施術も、メニューページでご案内しています。</p>
+</section>
 
-<section class="box" id="concept" aria-label="サロンのコンセプト">
-  <h2>コンセプト</h2>
-  <div>
+<nav class="holly-top-guide" aria-label="よく使うご案内">
+  <a href="/service/"><span class="holly-top-guide-icon" aria-hidden="true">✿</span><strong>サービス・料金</strong><small>Service</small><span aria-hidden="true">→</span></a>
+  <a href="/calendar/"><span class="holly-top-guide-icon" aria-hidden="true">▦</span><strong>営業カレンダー</strong><small>Calendar</small><span aria-hidden="true">→</span></a>
+  <a href="/access/"><span class="holly-top-guide-icon" aria-hidden="true">⌖</span><strong>アクセス</strong><small>Access</small><span aria-hidden="true">→</span></a>
+  <a href="/qanda/"><span class="holly-top-guide-icon" aria-hidden="true">?</span><strong>よくある質問</strong><small>FAQ</small><span aria-hidden="true">→</span></a>
+</nav>
+
+<section class="box holly-top-concept" id="concept" aria-labelledby="holly-top-concept-title">
+  <div class="holly-top-concept-layout">
+    <div class="holly-top-concept-copy">
+      <p class="holly-top-section-kicker">Our philosophy</p>
+      <h2 id="holly-top-concept-title">Concept <span>コンセプト</span></h2>
+      <p class="holly-top-concept-lead">Hollyで過ごす時間を、<br>大切に。</p>
       <p>家事、育児、仕事……誰かのために奔走する毎日のなかで、最後に自分のための時間を過ごしたのはいつだっただろう――。そんなふうに思う方に、ゆっくり休んでいただける場所をつくりました。</p>
       <p>ドアを開けた瞬間、日常の慌ただしさから少し離れて、ご自身をいたわる時間を過ごしていただけたら嬉しいです。毎日を頑張る女性のために、healing salon Holly は生まれました。</p>
       <p>施術は、大手サロンで経験を積み、新人の頃から指名が絶えなかったセラピストが、マンツーマンで担当します。いつお越しいただいても、丁寧で安定した施術をお届けできるよう心がけています。</p>
+      <a class="holly-hero-action" href="#forte">Hollyの強み <span aria-hidden="true">→</span></a>
+    </div>
+    <figure class="holly-top-concept-photo"><img src="/images/gallery/6.webp" alt="Hollyの店内に飾られた観葉植物やアート" width="1400" height="933" decoding="async"><figcaption>写真：Hollyの店内</figcaption></figure>
   </div>
 </section>
-<section class="links" aria-label="予約・SNS・ページへのリンク">
+
+<section class="links holly-top-links" aria-label="予約・SNSへのリンク">
   <h2 class="top-links-heading">ご予約・各種ご案内</h2>
   <ul>
-    <li><a href="https://stekina.com/profile/PDXH-7SJ9" target="_blank" rel="noopener">空き状況を確認する</a></li>
+    <li><a href="https://stekina.com/profile/PDXH-7SJ9" target="_blank" rel="noopener">予約ページで空き状況を確認</a></li>
     <li><a href="https://www.ekiten.jp/shop_84628313/" target="_blank" rel="noopener">エキテン</a></li>
     <li><a href="https://www.instagram.com/healer_holly/" target="_blank" rel="noopener">Instagram</a></li>
     <li><a href="https://x.com/healer_holly" target="_blank" rel="noopener">X</a></li>
     <li><a href="https://maps.app.goo.gl/tqmshzQH4X1WLdEo7" target="_blank" rel="noopener">Google Maps</a></li>
   </ul>
-  <h2 class="top-links-heading top-links-heading--pages">サロンについて</h2>
-  <ul>
-    <li><a href="/service/">サービス</a></li>
-    <li><a href="/access/">アクセス</a></li>
-    <li><a href="/calendar/">営業カレンダー</a></li>
-    <li><a href="/qanda/">よくある質問</a></li>
-    <li><a href="/gallery/">店内ギャラリー</a></li>
-  </ul>
 </section>
-
 
 <section class="box" id="target" aria-label="歓迎するお客様">
   <h2>歓迎するお客様</h2>
-  <div class="box-list">
-      <p>仕事や家事で疲れている女性</p>
+  <div class="box-list"><p>仕事や家事で疲れている女性</p>
       <p>リラクゼーションを受けたい方</p>
       <p>肩や腰の重だるさが気になる方</p>
       <p>日々のストレスを和らげたい方</p>
       <p>お子さんがいて、リラクゼーションサロンへの来店を諦めたことのある方</p>
-      <p>お子さんがいて、なかなか自分の時間が取れない方</p>
-  </div>
+      <p>お子さんがいて、なかなか自分の時間が取れない方</p></div>
 </section>
-
 <section class="box" id="forte" aria-label="サロンの強み">
   <h2>強み</h2>
-  <div>
-      <p>ご来店の際は、お疲れが溜まりやすい部位などを伺いながら、ひとつひとつ丁寧にほぐしていきます。平日の忙しさで残った緊張を、ゆっくりゆるめていく時間をお過ごしください。</p>
+  <div><p>ご来店の際は、お疲れが溜まりやすい部位などを伺いながら、ひとつひとつ丁寧にほぐしていきます。平日の忙しさで残った緊張を、ゆっくりゆるめていく時間をお過ごしください。</p>
       <p>ご褒美におすすめのコースのひとつが、フットリフレクソロジー60分＋バックショルダー30分の90分コース。足から首・肩までをまとめてケアできます。</p>
       <p>しっかり時間をとりたい日には、ボディヒーリング60分＋フットリフレクソロジー45分＋クイックハンド15分の120分ロングコースもおすすめです。</p>
-      <p>施術だけでなく、日々の悩みやこれまでのこと、これからのことをお話しする場としても、気軽にお使いください。皆さまにお会いできる日を楽しみにしています。</p>
-  </div>
+      <p>施術だけでなく、日々の悩みやこれまでのこと、これからのことをお話しする場としても、気軽にお使いください。皆さまにお会いできる日を楽しみにしています。</p></div>
 </section>
-
 <section class="box" id="personal" aria-label="オーナー・セラピストの好きなこと">
   <h2>サロンオーナー・セラピスト 三﨑の好きなこと</h2>
-  <div>
-      <p>ディズニー・サバイバルオーディション番組（JO1・INI・ME:I・HANA・KOIKEYZ）</p>
-      <p>他にもどんなことでもお話しください♪</p>
-  </div>
+  <div><p>ディズニー・サバイバルオーディション番組（JO1・INI・ME:I・HANA・KOIKEYZ）</p>
+      <p>他にもどんなことでもお話しください♪</p></div>
 </section>
 </main>
 <footer>

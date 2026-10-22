@@ -20,10 +20,10 @@
     memo.hidden=true; memo.textContent=''; body.replaceChildren();
     if(!entry) { const p=document.createElement('p');p.className='holly-cal-pending';p.textContent='営業予定を調整中です';body.append(p);return; }
     const grid=document.createElement('div');grid.className='holly-cal-grid';
-    for (const name of ['日','月','火','水','木','金','土']) {
+    for (const name of ['月','火','水','木','金','土','日']) {
       const el=document.createElement('div');el.className='holly-cal-weekday';el.textContent=name;grid.append(el);
     }
-    const offset = new Date(y,m-1,1).getDay();
+    const offset = (new Date(y,m-1,1).getDay()+6)%7; // v05.5: 月曜始まり、日曜は右端
     const days = new Date(y,m,0).getDate();
     const closed=new Set(entry.closed||[]);
     const notes=entry.memo||{};
