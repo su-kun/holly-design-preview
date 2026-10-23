@@ -927,3 +927,15 @@ address {
 .holly-about-intro,.holly-about-details{max-width:920px;margin:0 auto;}
 .holly-about-lead{font-family:'Yu Mincho',serif;font-size:18px;}
 @media(max-width:650px){.holly-top-features{padding:38px 6%;}.holly-top-features-layout{grid-template-columns:1fr;gap:22px;}.holly-top-features-photo{order:2;}.holly-top-features-photo img{height:210px;}.holly-top-features-copy{order:1;}.holly-top-features-copy h2{font-size:26px;}.holly-top-features-lead{font-size:17px;}.holly-top-service-cards{grid-template-columns:1fr;gap:12px;max-width:330px;}.holly-top-service-card img{height:140px;}.holly-top-service-card-name{font-size:14px;}.holly-top-service-card-more{font-size:11px;}}
+
+/* v05.5.5 Q189–192: restrained concept and ornamental breathing room */
+#concept.holly-top-concept{background:#f8f3f4;}
+#concept.holly-top-concept::before{left:2.5%;bottom:8px;width:142px;height:215px;opacity:.22;}
+#concept .holly-top-concept-copy{padding-top:78px;padding-bottom:80px;}
+#concept .holly-top-concept-copy h2{margin-bottom:20px;}
+#concept .holly-top-concept-copy .holly-top-concept-lead{margin-bottom:20px;}
+#concept .holly-top-concept-copy .holly-top-concept-summary{max-width:35em;margin:0 0 15px;font-size:13px;line-height:2.15;letter-spacing:.025em;}
+#concept .holly-top-concept-copy .holly-hero-action{margin-top:15px;}
+.holly-top-features{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(120deg,#fffdfa 0%,#fbf8f7 75%,#f6f1f3 100%);}
+.holly-top-features::after{content:"";position:absolute;z-index:-1;right:-32px;bottom:-70px;width:210px;height:290px;background:url('/images/botanical-line.svg') center/contain no-repeat;opacity:.13;transform:rotate(18deg);pointer-events:none;}
+@media(max-width:650px){#concept .holly-top-concept-copy{padding:48px 8% 51px;}#concept.holly-top-concept::before{width:94px;height:145px;left:auto;right:2%;bottom:4px;opacity:.14;}#concept .holly-top-concept-copy .holly-top-concept-summary{line-height:2.05;}}
