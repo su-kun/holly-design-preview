@@ -5,6 +5,8 @@ html {
 	scroll-behavior: smooth;
 }
 body {
+	/* v05.5.6: ブラウザの既定8px余白を取り除き、全ページの背景を画面端まで伸ばす */
+	margin: 0;
 	font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
 	padding-bottom: calc(var(--cta-height) + env(safe-area-inset-bottom, 0px));
 	background: var(--holly-bg);
