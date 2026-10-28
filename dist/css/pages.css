@@ -1,101 +1,6 @@
 @charset "UTF-8";
 
 
-/* index.php */
-.top_logo {
-    text-align: center;
-}
-.top_logo img {
-    max-width: 200px;
-}
-.top-des {
-    text-align: center;
-    margin: 1em auto;
-}
-.top-des p:nth-child(n+2):nth-child(-n+4)::before {
-    content: "◼︎";
-    color: #C5B3D3;
-}
-.links {
-    margin: 3em auto;
-}
-.links ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5em;
-    justify-content: center;
-    align-items: center;
-    font-size: 22.5px;
-    margin: 1.5em 0;
-}
-.links ul:first-child li:first-child a {
-    padding: 0.75em 1em;
-    border-radius: 99px;
-    background: #C5B3D3;
-    color: navy;
-}
-.box:nth-child(even) {
-    background-color: white;
-}
-.box {
-    width: 100%;
-    padding: 3em 0;
-}
-.box h2 {
-    margin-bottom: 0.5em;
-}
-.box div {
-    max-width: 44em;
-    margin: 0 auto;
-    padding: 0 1.25em;
-    box-sizing: border-box;
-}
-.box p + p {
-    margin-top: 1em;
-}
-.box .target-list p + p {
-    margin-top: 0;
-}
-.box .target-list p::before {
-    content: "◼︎ ";
-    color: #C5B3D3;
-}
-.box p {
-    line-height: 2;
-    letter-spacing: 0.025em;
-    text-align: left;
-}
-#personal p {
-    text-align: center;
-}
-#personal img {
-    width: 30%;
-    height: auto;
-    margin: 1em auto;
-}
- @media screen and (max-width: 768px) {
-    .top_logo img {
-        width: 150px;
-    }
-    .links ul {
-        font-size: 16px;
-    }
-    .box {
-        padding: 3em 1.5em;
-    }
-    .box p {
-        font-size: 16px;
-    }
-}
- @media screen and (max-width: 425px) {
-    .links ul {
-        flex-direction: column;
-    }
-    .links li {
-        margin: 0;
-    }
-}
-
 /* service.php */
 #service {
     display: grid;
@@ -634,19 +539,7 @@ address {
 }
 
 
-/* Holly refined design v0.3 — homepage and content pages */
-.top_logo{position:relative;isolation:isolate;text-align:center;padding-top:2em;overflow:hidden;}
-.top_logo:after{content:"";position:absolute;z-index:-1;right:max(4%,calc((100vw - 1100px)/2));top:2.2rem;width:110px;height:145px;opacity:.13;background-repeat:no-repeat;background-size:contain;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 140' fill='none' stroke='%2392788e' stroke-width='1.1'%3E%3Cpath d='M50 135 C45 95 52 50 34 8 M48 100 C26 87 16 69 12 52 C32 59 46 76 48 100 M46 76 C65 64 78 44 79 27 C58 40 47 57 46 76 M49 119 C67 108 80 91 84 75 C64 83 52 99 49 119'/%3E%3C/svg%3E");pointer-events:none;}
-.top_logo img{width:150px;max-width:35vw;height:auto;display:block;margin:0 auto}
-.top-des{max-width:620px;margin:1rem auto 1.6rem;padding:0 1.2rem;text-align:center;color:var(--holly-muted);}
-.top-des p{font-size:.94rem;line-height:1.9;margin:.12rem 0;}
-.top-des p:first-child{font-size:1rem;color:var(--holly-pink-deep);margin-bottom:.4rem;}
-.top-des p:nth-child(n+2):nth-child(-n+4)::before{content:none;}
-.links{max-width:880px;margin:1.8rem auto 3rem;padding:0 1.25rem;}
-.links ul{display:flex;flex-wrap:wrap;gap:.65rem;justify-content:center;align-items:center;font-size:.95rem;margin:.8rem 0;}
-.links ul li a{display:block;padding:.6rem 1rem;border:1px solid var(--holly-line);border-radius:999px;background:rgba(255,255,255,.75);}
-.links ul:first-child li:first-child a{background:var(--holly-pink);border-color:var(--holly-pink);color:white;box-shadow:none;padding:.65rem 1.35rem;}
-.links ul:nth-child(2){padding-top:.8rem;border-top:1px solid var(--holly-line);}
+/* 共通の下層セクション（トップ専用CSSはhome.css） */
 .box{position:relative;width:100%;box-sizing:border-box;padding:3.5rem 1.5rem;background:transparent;}
 .box:nth-child(even){background:#f5eef3;}
 .box h2{position:relative;margin-bottom:1.2rem;}
@@ -671,15 +564,13 @@ address {
 .menu-duration{font-size:.88rem;min-width:2.6em;background:#f0e7ef;color:#806980;font-weight:500;}
 .menu-price{font-size:1.05rem;font-weight:600;color:var(--holly-pink-deep);}
 @media(max-width:700px){
- .top_logo{padding:2.2rem 1rem .7rem}.top_logo:after{width:68px;height:100px;right:3%;top:1.3rem;opacity:.1}.top_logo img{width:126px;}
- .top-des{margin:.8rem auto 1.1rem}.links{margin:1.2rem auto 2rem;padding:0 1rem}.links ul{gap:.5rem;font-size:.88rem}.links ul li a{padding:.48rem .8rem;}
  .box{padding:2.7rem 1.15rem;}.box p{font-size:.96rem;}
  .service-row,.service-row--reverse{grid-template-columns:minmax(0,1fr);gap:.6rem;}
  .service-row--reverse article{grid-column:auto;grid-row:auto;}
  .service-photo img{max-height:210px;aspect-ratio:16/9;}
  #service article{padding:1rem;}
 }
-@media(max-width:430px){.top_logo:after{right:1%;width:54px;opacity:.08}.links ul:nth-child(2){gap:.45rem}.box{padding:2.3rem 1rem;}}
+@media(max-width:430px){.box{padding:2.3rem 1rem;}}
 
 /* Service page v04: category accordions with expandable menu details */
 #service{width:min(100% - 2rem,900px);gap:1rem;margin:0 auto;padding-top:2rem;} /* v05.5.9: 下層タイトルの開始位置を統一 */
@@ -788,161 +679,17 @@ address {
 #holly-calendar .holly-cal-contact { text-align:center;margin:0 auto 2rem;font-size:.86rem; }
 @media (max-width:480px) { #holly-calendar .holly-cal-wrapper { margin-top:2rem; } #holly-calendar .holly-cal-day {min-height:52px;padding-top:7px;} #holly-calendar .holly-cal-weekday {padding:8px 0;} #holly-calendar .holly-cal-legend {gap:10px 13px;} }
 
-/* Homepage v04: readability and navigation only; keep the original logo asset untouched. */
-.top-des-heading{margin:0 0 .7rem;font-weight:500;font-size:clamp(1rem,2vw,1.22rem);letter-spacing:.09em;color:var(--holly-pink-deep);line-height:1.8;}
-.top-links-heading{margin:0 auto .6rem;text-align:center;font-size:1rem;font-weight:500;letter-spacing:.08em;color:var(--holly-muted);}
-.top-links-heading--pages{margin-top:1.75rem;}
-.links ul:nth-of-type(2){border-top:1px solid var(--holly-line);padding-top:1rem;}
-@media (min-width:769px){.top_logo{padding-top:3rem}.top-des{margin-top:1.2rem}.links{margin-top:2.1rem;margin-bottom:3.5rem}.links ul{gap:.8rem 1rem}.box{padding-top:4.2rem;padding-bottom:4.2rem}}
-@media (max-width:430px){.top-des-heading{font-size:1rem}.links ul{gap:.55rem}.top-links-heading--pages{margin-top:1.4rem}}
-
-/* v04.1: calendar lower information, following confirmed layout. */
+/* v04.1: calendar lower information, following confirmed area. */
 #holly-calendar .holly-cal-business-hours { margin: 25px auto 0; border-top:1px solid #e6dfe6; border-bottom:1px solid #e6dfe6; padding:20px 8px; text-align:center; }
 #holly-calendar .holly-cal-business-hours p { color:#766976; font-size:.85rem; margin:0; line-height:1.8; }
 #holly-calendar .holly-cal-business-hours strong { display:block; color:#62535d; font-weight:400; font-size:1.4rem; letter-spacing:.06em; margin:4px auto; }
 #holly-calendar .holly-cal-notice { margin-top:22px; }
 
-/* v05.5: Q176–184 トップのみ。正式ロゴと下層の既存CSSは変更しない。
-   ナチュラルエレガントB：くすみラベンダーピンク／チャコール／グレージュ、控えめな銀色の線。写真にフィルターなし。 */
-.holly-hero {box-sizing:border-box;width:100%;position:relative;overflow:hidden;background:#faf7f6;}
-.holly-hero-header {display:flex;align-items:center;justify-content:space-between;gap:28px;max-width:1360px;margin:0 auto;padding:14px 4.5%;box-sizing:border-box;}
-.holly-hero-brand {display:block;flex:none;}
-.holly-hero-logo {display:block;width:114px;height:auto;} /* v05.5.6: ロゴの表示サイズのみ調整。元画像は保持 */
-.holly-hero-nav {display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:8px 16px;font-size:16px;color:var(--holly-ink);}
-.holly-hero-nav a {white-space:nowrap;}
-/* v05.5.9: トップの「ホーム」は下線なし。hover/focusは既存ナビ文字色のみ変更し、下層はcommon.cssの3px下線1本を維持。 */
-.holly-hero-nav a:not(.holly-hero-reserve):hover,.holly-hero-nav a:not(.holly-hero-reserve):focus-visible {color:var(--holly-pink-deep);}
-.holly-hero-nav .holly-hero-reserve {background:var(--holly-pink-deep);color:#fff;border-radius:999px;padding:8px 21px;}
-/* v05.5.6: 共通ヘッダー。下層の既存header余白を上書きし、トップと同じ構造にする */
-header.holly-site-header {padding:14px 4.5%;justify-content:space-between;box-sizing:border-box;width:100%;max-width:1360px;border-bottom:1px solid var(--holly-line);}
-header.holly-site-header .holly-hero-nav {justify-content:flex-end;}
-@media(max-width:650px){header.holly-site-header{flex-direction:column;gap:12px;padding:13px 4% 18px;}header.holly-site-header .holly-hero-nav{justify-content:center;}}
-.holly-hero-layout {max-width:1320px;width:90%;display:grid;grid-template-columns:45% 55%;margin:0 auto;align-items:stretch;min-height:490px;} /* v05.5.9: About Holly同様に左右5%の余白、内側写真55% */
-.holly-hero-inner {min-width:0;position:relative;z-index:1;box-sizing:border-box;padding:84px 3% 64px 13%;text-align:left;}
-.holly-hero-inner::after {content:"";position:absolute;width:104px;height:178px;bottom:-24px;left:0;background:url('/images/botanical-line.svg') center/contain no-repeat;opacity:.28;pointer-events:none;}
-.holly-hero-eyebrow {margin:0 0 24px;color:var(--holly-muted);font-size:16px;letter-spacing:.13em;}
-.holly-hero h1 {font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(25px,2.35vw,34px);font-weight:400;line-height:1.7;letter-spacing:.08em;color:var(--holly-ink);}
-.holly-hero h1 span {display:block;}
-.holly-hero-note {font-size:17px;line-height:2.1;margin:24px 0;color:var(--holly-muted);}
-.holly-hero-action {display:inline-flex;gap:15px;align-items:center;justify-content:space-between;padding:9px 25px;min-height:42px;box-sizing:border-box;border:1px solid var(--holly-pink-deep);border-radius:999px;background:rgba(255,255,255,.6);color:var(--holly-ink);font-size:16px;text-decoration:none;}
-.holly-hero-action:hover,.holly-hero-action:focus-visible {background:#f1e7ee;}
-.holly-hero-photo {margin:0;min-width:0;position:relative;}
-.holly-hero-photo img {display:block;width:100%;height:100%;min-height:490px;object-fit:cover;object-position:center;border-radius:0;}
-.holly-hero-photo figcaption {position:absolute;right:18px;bottom:12px;letter-spacing:.05em;padding:3px 9px;background:rgba(255,255,255,.86);font-size:10px;color:#544e52;}
-.holly-top-service {position:relative;padding:68px 5% 48px;background:#fbf9f7;box-sizing:border-box;overflow:hidden;}
-.holly-top-service::before,.holly-top-service::after {content:"";position:absolute;width:110px;height:185px;background:url('/images/botanical-line.svg') center/contain no-repeat;pointer-events:none;opacity:.23;}
-.holly-top-service::before {top:100px;left:-45px;transform:rotate(-16deg);}
-.holly-top-service::after {bottom:-70px;right:-23px;transform:rotate(180deg);}
-.holly-top-section-heading {max-width:1140px;margin:0 auto 25px;display:flex;align-items:flex-end;justify-content:space-between;gap:20px;}
-.holly-top-section-kicker {display:block;font-family:Georgia,"Yu Mincho",serif;font-size:16px;line-height:1.5;font-style:normal;letter-spacing:.12em;color:var(--holly-pink-deep);margin:0 0 6px;}
-.holly-top-section-heading h2,.holly-top-concept-copy h2 {margin:1px 0 0;text-align:left;font-family:Georgia,"Yu Mincho",serif;color:var(--holly-pink-deep);font-size:30px;font-style:italic;font-weight:400;letter-spacing:.04em;}
-.holly-top-section-heading h2 span,.holly-top-concept-copy h2 span {font-family:inherit;font-size:16px;font-style:normal;letter-spacing:.06em;color:var(--holly-ink);margin-left:12px;}
-.holly-top-small-link {font-size:16px;padding-bottom:5px;border-bottom:1px solid #c7b5c3;color:var(--holly-muted);}
-.holly-top-service-cards {display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1140px;margin:0 auto;}
-.holly-top-service-card {display:block;position:relative;background:#fffdfc;box-shadow:0 5px 19px rgba(84,68,77,.05);border:1px solid #eee7e7;padding-bottom:17px;transition:transform .2s ease;}
-.holly-top-service-card:hover {transform:translateY(-3px);}
-.holly-top-service-card img {display:block;width:100%;height:185px;object-fit:cover;}
-.holly-top-service-card-name {display:block;padding:14px 17px 8px;font-size:17px;letter-spacing:.02em;}
-.holly-top-service-card-more {display:flex;justify-content:space-between;padding:0 17px;color:var(--holly-muted);font-size:16px;}
-.holly-top-service-footnote {max-width:1140px;margin:15px auto 0;text-align:right;font-size:14px;color:var(--holly-muted);}
-.holly-top-guide {display:grid;grid-template-columns:repeat(4,1fr);max-width:1140px;margin:0 auto;padding:0 5% 42px;gap:12px;background:#fbf9f7;box-sizing:content-box;}
-.holly-top-guide a {display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1px;min-height:142px;background:#fff;border:1px solid #efe7e9;text-align:center;padding:15px 3px 11px;box-sizing:border-box;}
-.holly-top-guide a:hover {background:#f5eef3;}
-.holly-top-guide-icon {font-size:28px;color:#a18aa0;font-weight:300;line-height:1.35;}
-.holly-top-guide strong {font-weight:500;font-size:16px;}
-.holly-top-guide small {font-size:14px;color:var(--holly-muted);}
-.holly-top-guide a>span:last-child {font-size:12px;color:var(--holly-pink-deep);}
-/* HTMLのbox共通指定より詳細度を高くし、他の本文セクションは変えない。 */
-#concept.holly-top-concept {width:100%;padding:0;background:#f5eeef;isolation:isolate;overflow:hidden;}
-#concept.holly-top-concept::before {content:"";position:absolute;z-index:0;left:2%;bottom:25px;width:110px;height:170px;background:url('/images/botanical-line.svg') center/contain no-repeat;opacity:.26;pointer-events:none;}
-#concept .holly-top-concept-layout {display:grid;grid-template-columns:45% 55%;gap:0;align-items:stretch;max-width:1320px;width:90%;margin:0 auto;padding:0;position:relative;z-index:1;} /* v05.5.9: 内側写真55%、About Hollyと外側余白を揃える */
-#concept .holly-top-concept-copy {padding:64px 11% 62px 15%;max-width:none;box-sizing:border-box;}
-#concept .holly-top-concept-copy h2 {margin:0 0 25px;}
-#concept .holly-top-concept-copy h2::after {content:none;}
-#concept .holly-top-concept-copy .holly-top-concept-lead {font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:23px;letter-spacing:.08em;line-height:1.9;color:var(--holly-ink);margin:15px 0 20px;}
-#concept .holly-top-concept-copy p:not(.holly-top-section-kicker):not(.holly-top-concept-lead) {font-size:16px;line-height:2.05;color:#5c555a;margin:0 0 11px;text-align:left;}
-#concept .holly-top-concept-copy .holly-hero-action {margin-top:11px;}
-#concept .holly-top-concept-photo {position:relative;margin:0;min-width:0;}
-#concept .holly-top-concept-photo img {width:100%;height:100%;min-height:440px;object-fit:cover;display:block;}
-#concept .holly-top-concept-photo figcaption {position:absolute;bottom:12px;right:16px;background:rgba(255,255,255,.86);font-size:10px;padding:3px 8px;}
-.holly-top-links {padding:35px 1rem 25px;margin:0 auto;max-width:100%;background:#fbf9f7;}
-.holly-top-links ul {max-width:900px;margin:14px auto;}
+/* 下層ページの共通余白・Aboutの文面 */
 #target.box,#forte.box,#personal.box {padding-top:3.7em;padding-bottom:3.7em;}
-@media (max-width:900px) {
-  .holly-hero-header {gap:10px;padding:16px 4%;}
-  .holly-hero-logo {width:103px;}
-  .holly-hero-nav {gap:8px 11px;font-size:15px;}
-  .holly-hero-layout {min-height:410px;}
-  .holly-hero-inner {padding:70px 5% 40px 8%;}
-  .holly-hero h1 {font-size:26px;}
-  .holly-hero-photo img {min-height:410px;}
-  #concept .holly-top-concept-copy {padding:45px 8%;}
-}
-@media (max-width:650px) {
-  .holly-hero-header {flex-direction:column;align-items:center;gap:12px;padding:13px 4% 18px;}
-  .holly-hero-logo {width:101px;}
-  .holly-hero-nav {justify-content:center;gap:9px 13px;font-size:14px;line-height:1.6;}
-  .holly-hero-nav .holly-hero-reserve {padding:4px 13px;}
-  .holly-hero-layout {grid-template-columns:1fr;min-height:0;}
-  .holly-hero-inner {text-align:center;padding:37px 6% 32px;}
-  .holly-hero-inner::after {width:75px;height:125px;opacity:.15;}
-  .holly-hero-eyebrow {font-size:14px;margin-bottom:12px;}
-  .holly-hero h1 {font-size:clamp(22px,5.7vw,29px);line-height:1.75;}
-  .holly-hero-note {font-size:16px;margin:15px 0 19px;}
-  .holly-hero-photo img {min-height:0;height:235px;}
-  .holly-top-service {padding:42px 4% 28px;}
-  .holly-top-section-heading {display:block;margin-bottom:17px;}
-  .holly-top-section-heading h2 {font-size:27px;}
-  .holly-top-small-link {display:inline-block;margin-top:8px;}
-  .holly-top-service-cards {gap:10px;}
-  .holly-top-service-card img {height:140px;}
-  .holly-top-service-card-name {font-size:16px;padding:10px 9px 8px;}
-  .holly-top-service-card-more {font-size:16px;padding:0 9px;}
-  .holly-top-service-footnote {font-size:13px;}
-  .holly-top-guide {grid-template-columns:repeat(2,1fr);gap:9px;padding:0 4% 34px;}
-  .holly-top-guide a {min-height:124px;padding:10px 2px;}
-  #concept .holly-top-concept-layout {grid-template-columns:1fr;}
-  #concept .holly-top-concept-copy {padding:43px 8%;}
-  #concept .holly-top-concept-copy h2 {font-size:27px;}
-  #concept .holly-top-concept-copy .holly-top-concept-lead {font-size:20px;}
-  #concept .holly-top-concept-photo img {height:230px;min-height:0;}
-}
-@media (max-width:390px) {
-  .holly-hero-nav {gap:6px 10px;}
-}
-
-/* v05.5.4: Q185–188 approved compact lower home, photographic split + concise benefits */
-.holly-top-features{background:#fffdfa;padding:64px 5%;}
-.holly-top-features-layout{display:grid;grid-template-columns:55% 41%;max-width:1320px;margin:0 auto;gap:4%;align-items:center;}
-.holly-top-features-photo{margin:0;position:relative;min-width:0;}
-.holly-top-features-photo img{display:block;width:100%;height:500px;object-fit:cover;}
-.holly-top-features-photo figcaption{font-size:13px;color:#847881;margin-top:6px;}
-.holly-top-features-copy h2{font-family:Georgia,'Yu Mincho',serif;color:var(--holly-pink-deep);font-size:30px;font-style:italic;font-weight:400;margin:4px 0 18px;}
-.holly-top-features-copy h2 span{font-family:inherit;font-style:normal;color:var(--holly-ink);font-size:16px;margin-left:8px;}
-.holly-top-features-lead{font-family:'Yu Mincho',serif;font-size:19px;line-height:1.8;margin:0 0 18px;}
-.holly-top-features-list{border-top:1px solid #e6dce2;margin:0 0 22px;}
-.holly-top-features-list>div{padding:11px 0;border-bottom:1px solid #e6dce2;}
-.holly-top-features-list h3{font-size:17px;font-weight:500;margin:0 0 3px;}
-.holly-top-features-list p{font-size:16px;line-height:1.75;margin:0;color:#665c64;}
-.holly-top-outro{text-align:center;background:#fbf9f7;padding:35px 15px 45px;}
-.holly-top-outro>p{font-size:16px;margin:0 0 15px;}
-.holly-top-outro-links{display:flex;gap:22px;justify-content:center;margin:22px 0 0;font-size:16px;}
-.holly-about-intro,.holly-about-details{max-width:920px;margin:0 auto;}
-.holly-about-intro{padding-top:2rem;} /* v05.5.9: Aboutも他の下層タイトルと同じ上端 */
-.holly-about-lead{font-family:'Yu Mincho',serif;font-size:18px;}
-@media(max-width:650px){.holly-top-features{padding:38px 6%;}.holly-top-features-layout{grid-template-columns:1fr;gap:22px;}.holly-top-features-photo{order:2;}.holly-top-features-photo img{height:235px;}.holly-top-features-copy{order:1;}.holly-top-features-copy h2{font-size:26px;}.holly-top-features-lead{font-size:17px;}.holly-top-service-cards{grid-template-columns:1fr;gap:12px;max-width:330px;}}
-
-/* v05.5.5 Q189–192: restrained concept and ornamental breathing room */
-#concept.holly-top-concept{background:#f8f3f4;}
-#concept.holly-top-concept::before{left:2.5%;bottom:8px;width:142px;height:215px;opacity:.22;}
-#concept .holly-top-concept-copy{padding-top:78px;padding-bottom:80px;}
-#concept .holly-top-concept-copy h2{margin-bottom:20px;}
-#concept .holly-top-concept-copy .holly-top-concept-lead{margin-bottom:20px;}
-#concept .holly-top-concept-copy .holly-top-concept-summary{max-width:35em;margin:0 0 15px;font-size:16px;line-height:2.15;letter-spacing:.025em;}
-#concept .holly-top-concept-copy .holly-hero-action{margin-top:15px;}
-.holly-top-features{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(120deg,#fffdfa 0%,#fbf8f7 75%,#f6f1f3 100%);}
-.holly-top-features::after{content:"";position:absolute;z-index:-1;right:-32px;bottom:-70px;width:210px;height:290px;background:url('/images/botanical-line.svg') center/contain no-repeat;opacity:.13;transform:rotate(18deg);pointer-events:none;}
-@media(max-width:650px){#concept .holly-top-concept-copy{padding:48px 8% 51px;}#concept.holly-top-concept::before{width:94px;height:145px;left:auto;right:2%;bottom:4px;opacity:.14;}#concept .holly-top-concept-copy .holly-top-concept-summary{line-height:2.05;}}
+.holly-about-intro,.holly-about-details {max-width:920px;margin:0 auto;}
+.holly-about-intro {padding-top:2rem;}
+.holly-about-lead {font-family:"Yu Mincho",serif;font-size:18px;}
 
 /* v05.5.6: 既存Google地図を利用。案内図の捏造はせず元の外部マップで経路確認できるようにする */
 .access-map-embed{flex:1 1 420px;min-width:0;text-align:center;}
@@ -951,5 +698,6 @@ header.holly-site-header .holly-hero-nav {justify-content:flex-end;}
 @media(max-width:768px){.access-map-embed{width:100%;flex-basis:auto;}.access-map-embed iframe{height:270px;max-width:100%;margin-bottom:0;}}
 
 /* v05.5.6: 下層見出しの余白を共通化。トップの見出しには影響させない */
-#service>h2,#access>h2,#qanda>h2,#gallery>h2,#holly-calendar>h2,#calendars>h2,.holly-about-intro>h1{margin-top:0;margin-bottom:1.5rem;line-height:1.45;} /* v05.5.9: 親要素のpaddingと合わせて見出し位置統一 */
+#service>h2,#access>h2,#qanda>h2,#gallery>h2,#holly-calendar>h2,#calendars>h2,.holly-about-intro>h1
+{margin-top:0;margin-bottom:1.5rem;line-height:1.45;} /* v05.5.9: 親要素のpaddingと合わせて見出し位置統一 */
 .holly-about-intro>h1{font-size:30px;}

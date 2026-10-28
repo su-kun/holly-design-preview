@@ -1,0 +1,343 @@
+@charset "UTF-8";
+/* トップページ専用。src/templates/index.htmlの id/class と1対1で管理する。
+   他ページには読み込まれない。共通ヘッダー・フッター・CTAは common.css。 */
+
+/* 共通タイトルとリンク */
+#index-service .index-heading,
+#index-concept .index-heading,
+#index-forte .index-heading {
+  display: block;
+  margin: 0 0 6px;
+  font: 400 16px/1.5 Georgia, "Yu Mincho", serif;
+  letter-spacing: .12em;
+  color: var(--holly-pink-deep);
+}
+#index-service .index-h2-title,
+#index-concept .index-h2-title,
+#index-forte .index-h2-title {
+  margin: 1px 0 20px;
+  text-align: left;
+  font: italic 400 30px/1.4 Georgia, "Yu Mincho", serif;
+  letter-spacing: .04em;
+  color: var(--holly-pink-deep);
+}
+#index-service .index-h2-title span,
+#index-concept .index-h2-title span,
+#index-forte .index-h2-title span {
+  margin-left: 12px;
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--holly-ink);
+}
+.index-small-link {
+  display: inline-block;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #c7b5c3;
+  color: var(--holly-muted);
+  font-size: 16px;
+}
+.index-small-link:hover,
+.index-small-link:focus-visible { color: var(--holly-pink-deep); }
+
+/* トップのキャッチコピー・写真 */
+#index-top {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+  background: #faf7f6;
+}
+.index-top-area {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  align-items: stretch;
+  width: 90%;
+  max-width: 1320px;
+  min-height: 490px;
+  margin: 0 auto;
+}
+.index-top-phrase-area {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 84px 3% 64px 13%;
+  text-align: left;
+}
+.index-top-phrase-area::after {
+  content: "";
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+  width: 104px;
+  height: 178px;
+  background: url('/images/botanical-line.svg') center / contain no-repeat;
+  opacity: .28;
+  pointer-events: none;
+}
+.index-top-phrase-place { margin: 0 0 24px; color: var(--holly-muted); font-size: 16px; letter-spacing: .13em; }
+#index-top h1 {
+  font: 400 clamp(25px, 2.35vw, 34px)/1.7 "Yu Mincho", "Hiragino Mincho ProN", serif;
+  letter-spacing: .08em;
+  color: var(--holly-ink);
+}
+#index-top h1 span { display: block; }
+.index-top-phrase-concept { margin: 24px 0; color: var(--holly-muted); font-size: 17px; line-height: 2.1; }
+.index-top-phrase-action,
+.index-concept-action,
+.index-outro-reserve {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  min-height: 42px;
+  box-sizing: border-box;
+  padding: 9px 25px;
+  border: 1px solid var(--holly-pink-deep);
+  border-radius: 999px;
+  background: rgba(255,255,255,.6);
+  color: var(--holly-ink);
+  font-size: 16px;
+}
+.index-top-phrase-action:hover,
+.index-concept-action:hover,
+.index-outro-reserve:hover,
+.index-top-phrase-action:focus-visible,
+.index-concept-action:focus-visible,
+.index-outro-reserve:focus-visible { background: #f1e7ee; }
+.index-top-photo,
+.index-concept-photo { position: relative; margin: 0; min-width: 0; }
+.index-top-photo img,
+.index-concept-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.index-top-photo img { min-height: 490px; object-position: center; }
+.index-top-photo figcaption,
+.index-concept-photo figcaption {
+  position: absolute;
+  right: 16px;
+  bottom: 12px;
+  padding: 3px 8px;
+  background: rgba(255,255,255,.86);
+  color: #544e52;
+  font-size: 10px;
+}
+
+/* サービス紹介 */
+#index-service {
+  position: relative;
+  box-sizing: border-box;
+  padding: 68px 5% 48px;
+  overflow: hidden;
+  background: #fbf9f7;
+}
+#index-service::before,
+#index-service::after {
+  content: "";
+  position: absolute;
+  width: 110px;
+  height: 185px;
+  background: url('/images/botanical-line.svg') center / contain no-repeat;
+  pointer-events: none;
+  opacity: .23;
+}
+#index-service::before { top: 100px; left: -45px; transform: rotate(-16deg); }
+#index-service::after { right: -23px; bottom: -70px; transform: rotate(180deg); }
+.index-service-area {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) auto;
+  grid-template-areas: "heading link" "heading note";
+  align-items: end;
+  column-gap: 20px;
+  max-width: 1140px;
+  margin: 0 auto 25px;
+}
+.index-service-heading { grid-area: heading; }
+.index-service-heading .index-h2-title { margin-bottom: 0; }
+.index-service-note {
+  grid-area: note;
+  margin: 8px 0 0;
+  text-align: right;
+  color: var(--holly-muted);
+  font-size: 14px;
+}
+.index-service-area .index-small-link { grid-area: link; justify-self: end; }
+.index-service-cards {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 20px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.index-service-card {
+  display: block;
+  position: relative;
+  padding-bottom: 17px;
+  border: 1px solid #eee7e7;
+  background: #fffdfc;
+  box-shadow: 0 5px 19px rgba(84,68,77,.05);
+  transition: transform .2s ease;
+}
+.index-service-card:hover { transform: translateY(-3px); }
+.index-service-card img { display: block; width: 100%; height: 185px; object-fit: cover; }
+.index-service-card-name { display: block; padding: 14px 17px 8px; font-size: 17px; letter-spacing: .02em; }
+.index-service-card-more { display: flex; justify-content: space-between; padding: 0 17px; color: var(--holly-muted); font-size: 16px; }
+
+/* よく使うご案内 */
+#index-guide { background: #fbf9f7; }
+#index-guide nav {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 12px;
+  box-sizing: border-box;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 5% 42px;
+}
+#index-guide nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1px;
+  box-sizing: border-box;
+  min-height: 142px;
+  padding: 15px 3px 11px;
+  border: 1px solid #efe7e9;
+  background: #fff;
+  text-align: center;
+}
+#index-guide nav a:hover { background: #f5eef3; }
+.index-guide-icon { font-size: 28px; line-height: 1.35; font-weight: 300; color: #a18aa0; }
+#index-guide strong { font-weight: 500; font-size: 16px; }
+#index-guide small { font-size: 14px; color: var(--holly-muted); }
+#index-guide nav a > span:last-child { font-size: 12px; color: var(--holly-pink-deep); }
+
+/* コンセプト：内側の左右45%・55%、写真は右 */
+#index-concept {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #f8f3f4;
+}
+#index-concept::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  bottom: 8px;
+  left: 2.5%;
+  width: 142px;
+  height: 215px;
+  background: url('/images/botanical-line.svg') center / contain no-repeat;
+  opacity: .22;
+  pointer-events: none;
+}
+.index-concept-area {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  align-items: stretch;
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+.index-concept-phrase-area { box-sizing: border-box; min-width: 0; padding: 78px 11% 80px 15%; }
+.index-concept-lead {
+  margin: 15px 0 20px;
+  font: 400 23px/1.9 "Yu Mincho", "Hiragino Mincho ProN", serif;
+  letter-spacing: .08em;
+}
+.index-concept-phrase { margin: 0 0 15px; color: #5c555a; font-size: 16px; line-height: 2.1; letter-spacing: .025em; }
+.index-concept-action { margin-top: 15px; }
+.index-concept-photo img { min-height: 440px; }
+
+/* Hollyの特徴：写真55%／余白4%／文章41% */
+#index-forte {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 64px 5%;
+  background: linear-gradient(120deg,#fffdfa 0%,#fbf8f7 75%,#f6f1f3 100%);
+}
+#index-forte::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: -32px;
+  bottom: -70px;
+  width: 210px;
+  height: 290px;
+  background: url('/images/botanical-line.svg') center / contain no-repeat;
+  opacity: .13;
+  transform: rotate(18deg);
+  pointer-events: none;
+}
+.index-forte-area {
+  display: grid;
+  grid-template-columns: 55% 41%;
+  align-items: center;
+  gap: 4%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+.index-forte-photo { position: relative; margin: 0; min-width: 0; }
+.index-forte-photo img { display: block; width: 100%; height: 500px; object-fit: cover; }
+.index-forte-photo figcaption { margin-top: 6px; font-size: 13px; color: #847881; }
+.index-forte-lead { margin: 0 0 18px; font: 400 19px/1.8 "Yu Mincho", serif; }
+.index-forte-list { margin: 0 0 22px; border-top: 1px solid #e6dce2; }
+.index-forte-list > div { padding: 11px 0; border-bottom: 1px solid #e6dce2; }
+.index-forte-list h3 { margin: 0 0 3px; font-size: 17px; font-weight: 500; }
+.index-forte-list p { margin: 0; color: #665c64; font-size: 16px; line-height: 1.75; }
+
+/* 下部の予約案内 */
+#index-outro { padding: 35px 15px 45px; background: #fbf9f7; text-align: center; }
+#index-outro > p { margin: 0 0 15px; font-size: 16px; }
+.index-outro-links { display: flex; justify-content: center; gap: 22px; margin: 22px 0 0; font-size: 16px; }
+.index-outro-links a:hover { color: var(--holly-pink-deep); }
+
+@media (max-width: 900px) {
+  .index-top-area { min-height: 410px; }
+  .index-top-phrase-area { padding: 70px 5% 40px 8%; }
+  #index-top h1 { font-size: 26px; }
+  .index-top-photo img { min-height: 410px; }
+  .index-concept-phrase-area { padding: 45px 8%; }
+}
+@media (max-width: 650px) {
+  .index-top-area, .index-concept-area { grid-template-columns: minmax(0,1fr); min-height: 0; }
+  .index-top-phrase-area { padding: 37px 6% 32px; text-align: center; }
+  .index-top-phrase-area::after { width: 75px; height: 125px; opacity: .15; }
+  .index-top-phrase-place { margin-bottom: 12px; font-size: 14px; }
+  #index-top h1 { font-size: clamp(22px,5.7vw,29px); line-height: 1.75; }
+  .index-top-phrase-concept { margin: 15px 0 19px; font-size: 16px; }
+  .index-top-photo img, .index-concept-photo img { height: 235px; min-height: 0; }
+
+  #index-service { padding: 42px 4% 28px; }
+  .index-service-area { display: block; margin-bottom: 17px; }
+  .index-service-area .index-small-link { margin: 8px 0 0; }
+  .index-service-note { text-align: left; font-size: 13px; }
+  .index-service-cards { grid-template-columns: minmax(0,1fr); gap: 12px; max-width: 330px; }
+  .index-service-card img { height: 140px; }
+  .index-service-card-name { padding: 10px 9px 8px; font-size: 16px; }
+  .index-service-card-more { padding: 0 9px; font-size: 16px; }
+
+  #index-guide nav { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 9px; padding: 0 4% 34px; }
+  #index-guide nav a { min-height: 124px; padding: 10px 2px; }
+
+  .index-concept-phrase-area { padding: 48px 8% 51px; }
+  #index-concept::before { right: 2%; left: auto; bottom: 4px; width: 94px; height: 145px; opacity: .14; }
+  .index-concept-lead { font-size: 20px; }
+  .index-concept-phrase { line-height: 2.05; }
+
+  #index-forte { padding: 38px 6%; }
+  .index-forte-area { grid-template-columns: minmax(0,1fr); gap: 22px; }
+  .index-forte-photo { order: 2; }
+  .index-forte-photo img { height: 235px; }
+  .index-forte-copy { order: 1; }
+  .index-forte-lead { font-size: 17px; }
+  #index-service .index-h2-title,
+  #index-concept .index-h2-title,
+  #index-forte .index-h2-title { font-size: 27px; }
+}
